@@ -1,1 +1,1 @@
-<?php header('Location: https://m-santhosh-kumar-resume.herokuapp.com/'); ?>
+<?php header('Location: /index.html'); ?>
