@@ -54,7 +54,7 @@
 			return netIsLight() ? "rgba(30, 30, 45, " + alpha + ")" : "rgba(205, 215, 255, " + alpha + ")";
 		}
 		function netDotColor() {
-			return netIsLight() ? "rgba(139, 92, 246, 0.55)" : "rgba(139, 92, 246, 0.8)";
+			return netIsLight() ? "rgba(124, 58, 237, 0.75)" : "rgba(139, 92, 246, 0.8)";
 		}
 
 		function netInitParticles() {
