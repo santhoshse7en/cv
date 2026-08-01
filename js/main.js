@@ -86,16 +86,14 @@
 			netCtx.clearRect(0, 0, netWidth, netHeight);
 			var linkDist = 130;
 
-			if (!reduceMotion) {
-				for (let n = 0; n < netParticles.length; n++) {
-					var p = netParticles[n];
-					p.x += p.vx;
-					p.y += p.vy;
-					if (p.x < 0 || p.x > netWidth) p.vx *= -1;
-					if (p.y < 0 || p.y > netHeight) p.vy *= -1;
-					p.x = Math.max(0, Math.min(netWidth, p.x));
-					p.y = Math.max(0, Math.min(netHeight, p.y));
-				}
+			for (let n = 0; n < netParticles.length; n++) {
+				var p = netParticles[n];
+				p.x += p.vx;
+				p.y += p.vy;
+				if (p.x < 0 || p.x > netWidth) p.vx *= -1;
+				if (p.y < 0 || p.y > netHeight) p.vy *= -1;
+				p.x = Math.max(0, Math.min(netWidth, p.x));
+				p.y = Math.max(0, Math.min(netHeight, p.y));
 			}
 
 			for (let a = 0; a < netParticles.length; a++) {
@@ -135,12 +133,11 @@
 				netCtx.fill();
 			}
 
-			if (!reduceMotion) netAnimId = requestAnimationFrame(netStep);
+			netAnimId = requestAnimationFrame(netStep);
 		}
 
 		function netStart() {
 			if (netAnimId) cancelAnimationFrame(netAnimId);
-			if (reduceMotion) { netStep(); return; }
 			netAnimId = requestAnimationFrame(netStep);
 		}
 
