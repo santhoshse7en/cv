@@ -38,6 +38,135 @@
 		}
 	});
 
+	/* ---------- Animated tech background (particle network) ---------- */
+	var networkCanvas = document.getElementById("bg-network");
+	if (networkCanvas && networkCanvas.getContext) {
+		var netCtx = networkCanvas.getContext("2d");
+		var netDpr = Math.min(window.devicePixelRatio || 1, 1.5);
+		var netWidth = 0, netHeight = 0, netParticles = [], netAnimId = null;
+		var netMouse = { x: 0, y: 0, active: false };
+
+		function netIsLight() {
+			return root.getAttribute("data-theme") === "light" ||
+				(!root.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: light)").matches);
+		}
+		function netLineColor(alpha) {
+			return netIsLight() ? "rgba(30, 30, 45, " + alpha + ")" : "rgba(205, 215, 255, " + alpha + ")";
+		}
+		function netDotColor() {
+			return netIsLight() ? "rgba(139, 92, 246, 0.55)" : "rgba(139, 92, 246, 0.8)";
+		}
+
+		function netInitParticles() {
+			var count = Math.min(90, Math.max(24, Math.floor((netWidth * netHeight) / 16000)));
+			netParticles = [];
+			for (let n = 0; n < count; n++) {
+				netParticles.push({
+					x: Math.random() * netWidth,
+					y: Math.random() * netHeight,
+					vx: (Math.random() - 0.5) * 0.35,
+					vy: (Math.random() - 0.5) * 0.35,
+					r: Math.random() * 1.6 + 0.8
+				});
+			}
+		}
+
+		function netResize() {
+			netWidth = window.innerWidth;
+			netHeight = window.innerHeight;
+			networkCanvas.width = netWidth * netDpr;
+			networkCanvas.height = netHeight * netDpr;
+			networkCanvas.style.width = netWidth + "px";
+			networkCanvas.style.height = netHeight + "px";
+			netCtx.setTransform(netDpr, 0, 0, netDpr, 0, 0);
+			netInitParticles();
+		}
+
+		function netStep() {
+			netCtx.clearRect(0, 0, netWidth, netHeight);
+			var linkDist = 130;
+
+			if (!reduceMotion) {
+				for (let n = 0; n < netParticles.length; n++) {
+					var p = netParticles[n];
+					p.x += p.vx;
+					p.y += p.vy;
+					if (p.x < 0 || p.x > netWidth) p.vx *= -1;
+					if (p.y < 0 || p.y > netHeight) p.vy *= -1;
+					p.x = Math.max(0, Math.min(netWidth, p.x));
+					p.y = Math.max(0, Math.min(netHeight, p.y));
+				}
+			}
+
+			for (let a = 0; a < netParticles.length; a++) {
+				for (let b = a + 1; b < netParticles.length; b++) {
+					var dx = netParticles[a].x - netParticles[b].x;
+					var dy = netParticles[a].y - netParticles[b].y;
+					var dist = Math.sqrt(dx * dx + dy * dy);
+					if (dist < linkDist) {
+						netCtx.strokeStyle = netLineColor((1 - dist / linkDist) * 0.35);
+						netCtx.lineWidth = 1;
+						netCtx.beginPath();
+						netCtx.moveTo(netParticles[a].x, netParticles[a].y);
+						netCtx.lineTo(netParticles[b].x, netParticles[b].y);
+						netCtx.stroke();
+					}
+				}
+				if (netMouse.active) {
+					var mdx = netParticles[a].x - netMouse.x;
+					var mdy = netParticles[a].y - netMouse.y;
+					var mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+					var mouseLinkDist = linkDist * 1.4;
+					if (mdist < mouseLinkDist) {
+						netCtx.strokeStyle = netLineColor((1 - mdist / mouseLinkDist) * 0.45);
+						netCtx.lineWidth = 1;
+						netCtx.beginPath();
+						netCtx.moveTo(netParticles[a].x, netParticles[a].y);
+						netCtx.lineTo(netMouse.x, netMouse.y);
+						netCtx.stroke();
+					}
+				}
+			}
+
+			netCtx.fillStyle = netDotColor();
+			for (let n = 0; n < netParticles.length; n++) {
+				netCtx.beginPath();
+				netCtx.arc(netParticles[n].x, netParticles[n].y, netParticles[n].r, 0, Math.PI * 2);
+				netCtx.fill();
+			}
+
+			if (!reduceMotion) netAnimId = requestAnimationFrame(netStep);
+		}
+
+		function netStart() {
+			if (netAnimId) cancelAnimationFrame(netAnimId);
+			if (reduceMotion) { netStep(); return; }
+			netAnimId = requestAnimationFrame(netStep);
+		}
+
+		var netResizeTimer;
+		window.addEventListener("resize", function () {
+			clearTimeout(netResizeTimer);
+			netResizeTimer = setTimeout(netResize, 200);
+		});
+		window.addEventListener("mousemove", function (e) {
+			netMouse.x = e.clientX;
+			netMouse.y = e.clientY;
+			netMouse.active = true;
+		}, { passive: true });
+		window.addEventListener("mouseleave", function () { netMouse.active = false; });
+		document.addEventListener("visibilitychange", function () {
+			if (document.hidden) {
+				if (netAnimId) cancelAnimationFrame(netAnimId);
+			} else {
+				netStart();
+			}
+		});
+
+		netResize();
+		netStart();
+	}
+
 	/* ---------- Header scroll state + scroll-progress bar ---------- */
 	var header = document.querySelector(".site-header");
 	var progressBar = document.getElementById("scroll-progress");

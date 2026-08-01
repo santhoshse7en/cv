@@ -163,6 +163,15 @@ body {
 :root[data-theme="light"] .bg-orbs::before,
 :root[data-theme="light"] .bg-orbs::after { opacity: .18; }
 
+#bg-network {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	opacity: 0.6;
+}
+:root[data-theme="light"] #bg-network { opacity: 0.35; }
+
 /* ---------- Buttons & chips ---------- */
 .btn {
 	display: inline-flex;
