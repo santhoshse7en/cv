@@ -384,20 +384,36 @@
 		}
 	})();
 
-	/* ---------- Project filters ---------- */
+	/* ---------- Project filters + search ---------- */
 	var filterButtons = document.querySelectorAll(".project-filters button");
 	var projectCards = document.querySelectorAll(".project-card");
+	var projectSearch = document.getElementById("project-search");
+	var projectEmpty = document.getElementById("project-empty");
+	var activeFilter = "all";
+
+	function applyProjectFilters() {
+		var query = (projectSearch && projectSearch.value || "").trim().toLowerCase();
+		var visibleCount = 0;
+		projectCards.forEach(function (card) {
+			var matchesFilter = activeFilter === "all" || card.getAttribute("data-platform") === activeFilter;
+			var text = (card.querySelector("h3").textContent + " " + card.querySelector("p").textContent).toLowerCase();
+			var matchesSearch = !query || text.indexOf(query) !== -1;
+			var match = matchesFilter && matchesSearch;
+			card.classList.toggle("hidden", !match);
+			if (match) visibleCount++;
+		});
+		if (projectEmpty) projectEmpty.hidden = visibleCount !== 0;
+	}
+
 	filterButtons.forEach(function (btn) {
 		btn.addEventListener("click", function () {
-			var filter = btn.getAttribute("data-filter");
+			activeFilter = btn.getAttribute("data-filter");
 			filterButtons.forEach(function (b) { b.classList.remove("active"); });
 			btn.classList.add("active");
-			projectCards.forEach(function (card) {
-				var match = filter === "all" || card.getAttribute("data-platform") === filter;
-				card.classList.toggle("hidden", !match);
-			});
+			applyProjectFilters();
 		});
 	});
+	if (projectSearch) projectSearch.addEventListener("input", applyProjectFilters);
 
 	/* ---------- Toast ---------- */
 	var toastEl = document.getElementById("toast");

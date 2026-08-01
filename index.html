@@ -338,10 +338,17 @@
 					<p>11 packages across PyPI and npm — encryption toolkits, code-quality analyzers, and data utilities, built for developers who need reliable building blocks.</p>
 				</div>
 
-				<div class="project-filters reveal">
-					<button class="active" data-filter="all">All (11)</button>
-					<button data-filter="pypi">PyPI (9)</button>
-					<button data-filter="npm">npm (2)</button>
+				<div class="project-controls reveal">
+					<div class="project-filters">
+						<button class="active" data-filter="all">All (11)</button>
+						<button data-filter="pypi">PyPI (9)</button>
+						<button data-filter="npm">npm (2)</button>
+					</div>
+
+					<label class="project-search">
+						<svg><use href="#icon-search"/></svg>
+						<input type="text" id="project-search" placeholder="Search packages…" autocomplete="off" aria-label="Search packages">
+					</label>
 				</div>
 
 				<div class="project-grid reveal">
@@ -502,6 +509,8 @@
 
 				</div>
 
+				<p class="project-empty" id="project-empty" hidden>No packages match your search.</p>
+
 				<div class="projects-more reveal">
 					<a class="btn btn-ghost" href="https://pypi.org/user/santhoshse7en/" target="_blank" rel="noopener">All PyPI packages <svg><use href="#icon-external"/></svg></a>
 					&nbsp;
@@ -534,29 +543,11 @@
 	</main>
 
 	<footer class="site-footer">
-		<div class="container footer-top">
+		<div class="container footer-bottom">
 			<a class="brand" href="#home">
 				<span class="mark">SK</span> Santhosh Kumar
 			</a>
-
-			<nav class="footer-links" aria-label="Footer">
-				<a href="#about-section">About</a>
-				<a href="#resume-section">Resume</a>
-				<a href="#projects-section">Projects</a>
-				<a href="#contact-section">Contact</a>
-			</nav>
-
-			<div class="footer-social">
-				<a class="icon-btn" href="https://www.linkedin.com/in/m-santhosh-kumar/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg><use href="#icon-linkedin"/></svg></a>
-				<a class="icon-btn" href="https://github.com/santhoshse7en" aria-label="GitHub" target="_blank" rel="noopener"><svg><use href="#icon-github"/></svg></a>
-				<a class="icon-btn" href="https://pypi.org/user/santhoshse7en/" aria-label="PyPI" target="_blank" rel="noopener"><svg><use href="#icon-package"/></svg></a>
-				<a class="icon-btn" href="https://www.npmjs.com/~santhoshse7en" aria-label="npm" target="_blank" rel="noopener"><svg><use href="#icon-terminal"/></svg></a>
-			</div>
-		</div>
-
-		<div class="container footer-bottom">
-			<span>&copy; <span id="year"></span> M Santhosh Kumar. Built from scratch, no framework required.</span>
-			<span>Bengaluru, India</span>
+			<span>&copy; <span id="year"></span> All rights reserved.</span>
 		</div>
 	</footer>
 
