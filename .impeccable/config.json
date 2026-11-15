@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-15T13:21:57.706Z",
+        "reason": "Claude: only hit is section.close whose children are .wrap with padding-inline var(--gutter) 16-40px; verified visually at 375 and 1440"
+      }
+    ]
+  }
+}

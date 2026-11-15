@@ -3,24 +3,29 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>M Santhosh Kumar — Data Engineer &amp; Technical Lead</title>
+	<title>M Santhosh Kumar — Technical Lead &amp; Data Engineer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="M Santhosh Kumar — Technical Lead at Digitap.ai and data engineer. Builds data pipelines, security tooling, and open-source packages on PyPI and npm.">
-	<meta name="theme-color" content="#08080c">
+	<meta name="description" content="M Santhosh Kumar — Technical Lead at Digitap.ai and data engineer. Author of news-fetch (230+ stars) and Dev Tools, with 11 open-source packages on PyPI and npm.">
+	<meta name="theme-color" content="#f4f5f1" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)">
 
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="M Santhosh Kumar — Data Engineer & Technical Lead">
-	<meta property="og:description" content="Technical Lead at Digitap.ai and data engineer. Builds data pipelines, security tooling, and open-source packages on PyPI and npm.">
+	<meta property="og:title" content="M Santhosh Kumar — Technical Lead & Data Engineer">
+	<meta property="og:description" content="Author of news-fetch and Dev Tools. Technical Lead at Digitap.ai, 11 open-source packages on PyPI and npm.">
 	<meta property="og:url" content="https://santhoshse7en.github.io/cv/">
 	<link rel="canonical" href="https://santhoshse7en.github.io/cv/">
 
-	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff7a45'/%3E%3Cstop offset='.55' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='%230a0a0a' text-anchor='middle'%3ESK%3C/text%3E%3C/svg%3E">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23121212'/%3E%3Crect x='0' y='50' width='16' height='14' fill='%232f5bd3'/%3E%3Crect x='16' y='50' width='16' height='14' fill='%23f2c230'/%3E%3Crect x='32' y='50' width='16' height='14' fill='%23d6402b'/%3E%3Crect x='48' y='50' width='16' height='14' fill='%231f8a5b'/%3E%3Ctext x='32' y='38' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='%23f4f5f1' text-anchor='middle'%3ESK%3C/text%3E%3C/svg%3E">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/style.css?v=2026-11-15">
+	<link rel="stylesheet" href="css/style.css?v=2026-11-15b">
+
+	<script>
+		try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+	</script>
 
 	<script type="application/ld+json">
 	{
@@ -43,671 +48,191 @@
 </head>
 
 <body>
-	<a class="skip-link" href="#main-content">Skip to content</a>
+	<a class="skip-link" href="#main">Skip to content</a>
 
-	<!-- Icon sprite -->
 	<svg style="display:none" aria-hidden="true">
-		<symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></symbol>
-		<symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></symbol>
-		<symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
-		<symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></symbol>
-		<symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3a1.96 1.96 0 1 0 0 3.92A1.96 1.96 0 0 0 5.25 3ZM20.44 20h-3.37v-5.8c0-1.38-.02-3.16-1.93-3.16-1.93 0-2.23 1.5-2.23 3.06V20H9.55V8.5h3.24v1.57h.05c.45-.86 1.55-1.77 3.2-1.77 3.43 0 4.4 2.26 4.4 5.2V20Z"/></symbol>
-		<symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
-		<symbol id="icon-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-1.6 5-5 1.6 1.6-5z"/></symbol>
-		<symbol id="icon-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="M3 8l9 5 9-5M12 13v8"/></symbol>
-		<symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-		<symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></symbol>
-		<symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M19 5l-8 8M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></symbol>
-		<symbol id="icon-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></symbol>
-		<symbol id="icon-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></symbol>
-		<symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 7.9 8 9 4.6-1.1 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
-		<symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
-		<symbol id="icon-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
-		<symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
-		<symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></symbol>
-		<symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+		<symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.370-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.750 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+		<symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3a1.960 1.96 0 1 0 0 3.92A1.96 1.96 0 0 0 5.25 3ZM20.44 20h-3.37v-5.8c0-1.38-.02-3.16-1.93-3.16-1.93 0-2.23 1.5-2.23 3.06V20H9.55V8.5h3.24v1.57h.05c.45-.86 1.550-1.77 3.2-1.77 3.43 0 4.4 2.26 4.4 5.2V20Z"/></symbol>
+		<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+		<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></symbol>
+		<symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V5a1 1 0 0 1 1-1h9"/></symbol>
+		<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+		<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
+		<symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></symbol>
 	</svg>
 
-	<div id="page-loader"><div class="loader-mark" aria-hidden="true"></div></div>
-	<div class="bg-orbs" aria-hidden="true"></div>
-	<canvas id="bg-network" aria-hidden="true"></canvas>
-	<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-
-	<header class="site-header" id="site-header">
-		<div class="container">
-			<a class="brand" href="#home">
-				<span class="mark">SK</span> Santhosh Kumar
+	<header class="masthead">
+		<div class="wrap masthead-row">
+			<a class="brand" href="#top" aria-label="M Santhosh Kumar, back to top">
+				<span class="brand-mark" aria-hidden="true">SK</span>
+				<span class="brand-meta">Programme <span class="tnum">2018 – 2026</span> · Bengaluru</span>
 			</a>
-
-			<nav class="nav-links" aria-label="Primary">
-				<a href="#home">Home</a>
-				<a href="#about-section">About</a>
-				<a href="#resume-section">Resume</a>
-				<a href="#projects-section">Projects</a>
-				<a href="#contact-section">Contact</a>
+			<nav class="nav" aria-label="Primary">
+				<a href="#work">Work</a>
+				<a href="#experience">Experience</a>
+				<a href="#contact">Contact</a>
+				<button class="theme-btn" type="button" aria-label="Switch colour theme">
+					<svg class="i-sun"><use href="#i-sun"/></svg><svg class="i-moon"><use href="#i-moon"/></svg>
+				</button>
 			</nav>
-
-			<div class="nav-actions">
-				<button class="icon-btn cmdk-trigger" id="cmdk-trigger" aria-label="Open command menu" title="Search (Ctrl/⌘ K)">
-					<svg><use href="#icon-search"/></svg>
-				</button>
-				<button class="icon-btn theme-toggle" aria-label="Toggle color theme">
-					<svg class="icon-sun"><use href="#icon-sun"/></svg>
-					<svg class="icon-moon"><use href="#icon-moon"/></svg>
-				</button>
-				<button class="icon-btn nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-					<svg class="icon-menu-open"><use href="#icon-menu"/></svg>
-					<svg class="icon-menu-close"><use href="#icon-close"/></svg>
-				</button>
-			</div>
 		</div>
-
-		<div class="mobile-nav-backdrop"></div>
-		<nav class="mobile-nav" aria-label="Mobile">
-			<a href="#home">Home</a>
-			<a href="#about-section">About</a>
-			<a href="#resume-section">Resume</a>
-			<a href="#projects-section">Projects</a>
-			<a href="#contact-section">Contact</a>
-		</nav>
 	</header>
 
-	<div class="cmdk-overlay" id="cmdk-overlay" hidden>
-		<div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Command menu">
-			<div class="cmdk-input-row">
-				<svg><use href="#icon-search"/></svg>
-				<input type="text" id="cmdk-input" class="cmdk-input" placeholder="Jump to a section or run a command…" autocomplete="off">
-				<kbd>Esc</kbd>
-			</div>
-			<ul class="cmdk-list" id="cmdk-list" role="listbox"></ul>
-		</div>
-	</div>
+	<main id="main">
 
-	<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-	<main id="main-content">
-
-		<section class="hero" id="home">
-			<div class="container hero-inner">
-				<div class="hero-avatar-row">
-					<span class="status-dot" aria-hidden="true"></span>
-					<p class="kicker">Currently building at Digitap.ai · Bengaluru, India</p>
-				</div>
-				<h1>M Santhosh <span class="grad">Kumar</span></h1>
-				<p class="role-line">I build <span class="role-rotate" data-roles='["scalable data pipelines.","secure Python packages.","open-source dev tools.","privacy-first browser tools.","engineering teams."]'></span></p>
-				<p class="lede">Technical Lead at Digitap.ai with 5+ years designing data pipelines, security tooling, and product architecture — and the maintainer of 11 open-source packages on PyPI and npm, including <a href="https://github.com/santhoshse7en/news-fetch" target="_blank" rel="noopener">news-fetch</a> (230+ ★).</p>
-
-				<div class="hero-cta">
-					<a href="#projects-section" class="btn btn-primary">
-						View Projects <svg><use href="#icon-compass"/></svg>
-					</a>
-					<a href="https://drive.google.com/uc?id=1Vhc5wcg0-SGWfR5hgnRFZotR65r9IOA7&export=download" class="btn btn-ghost">
-						<svg><use href="#icon-download"/></svg> Résumé
-					</a>
-				</div>
-
-				<div class="hero-social">
-					<a class="icon-btn" href="https://www.linkedin.com/in/m-santhosh-kumar/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg><use href="#icon-linkedin"/></svg></a>
-					<a class="icon-btn" href="https://github.com/santhoshse7en" aria-label="GitHub" target="_blank" rel="noopener"><svg><use href="#icon-github"/></svg></a>
-					<a class="icon-btn" href="https://pypi.org/user/santhoshse7en/" aria-label="PyPI" target="_blank" rel="noopener"><svg><use href="#icon-package"/></svg></a>
-					<a class="icon-btn" href="https://www.npmjs.com/~santhoshse7en" aria-label="npm" target="_blank" rel="noopener"><svg><use href="#icon-terminal"/></svg></a>
-					<a class="icon-btn" href="mailto:santhoshse7en@gmail.com" aria-label="Email"><svg><use href="#icon-mail"/></svg></a>
-				</div>
+		<section class="title-block wrap" id="top" aria-labelledby="name">
+			<div class="title-main">
+				<h1 id="name">M Santhosh Kumar</h1>
+				<p class="title-role">Technical Lead at <a href="https://digitap.ai/" target="_blank" rel="noopener">Digitap.ai</a> and data engineer. I design data pipelines, lead a team of engineers, and ship tools other developers use.</p>
 			</div>
 
-			<div class="scroll-cue" aria-hidden="true"><span>SCROLL</span><span class="line"></span></div>
+			<aside class="registration" aria-label="Get in touch">
+				<p class="reg-status"><span class="dot" aria-hidden="true"></span> Open to lead roles and indie collaborations</p>
+				<div class="reg-actions">
+					<a class="btn btn-ink" href="mailto:santhoshse7en@gmail.com">Email me</a>
+					<a class="btn btn-line" href="https://drive.google.com/uc?id=1Vhc5wcg0-SGWfR5hgnRFZotR65r9IOA7&export=download"><svg><use href="#i-download"/></svg> Résumé</a>
+				</div>
+				<ul class="reg-links">
+					<li><a href="https://github.com/santhoshse7en" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> GitHub</a></li>
+					<li><a href="https://www.linkedin.com/in/m-santhosh-kumar/" target="_blank" rel="noopener"><svg><use href="#i-linkedin"/></svg> LinkedIn</a></li>
+					<li><a href="https://pypi.org/user/santhoshse7en/" target="_blank" rel="noopener">PyPI</a></li>
+					<li><a href="https://www.npmjs.com/~santhoshse7en" target="_blank" rel="noopener">npm</a></li>
+				</ul>
+			</aside>
 		</section>
 
-		<section id="about-section">
-			<div class="container">
-				<div class="section-head reveal">
-					<span class="eyebrow">About</span>
-					<h2>Turning messy data into reliable systems</h2>
-				</div>
+		<section class="keynotes wrap" aria-label="Featured work">
+			<article class="keynote keynote--python">
+				<header class="keynote-head">
+					<span class="track">Open source · Python</span>
+					<span class="tnum">Nov 2026 · v1.1.0</span>
+				</header>
+				<h2><a href="https://github.com/santhoshse7en/news-fetch" target="_blank" rel="noopener">news-fetch</a></h2>
+				<p class="keynote-lede">A news scraper and article extractor with its own extraction engine. Give it any news URL and it returns the title, body, Markdown, authors, date and image, plus a confidence score for each field.</p>
+				<p class="keynote-proof tnum"><strong data-gh-stars="santhoshse7en/news-fetch">230+</strong> stars <span aria-hidden="true">·</span> <strong data-gh-forks="santhoshse7en/news-fetch">110+</strong> forks <span aria-hidden="true">·</span> Python 3.11+</p>
+<pre class="keynote-code"><code><span class="c">$</span> pip install news-fetch
+<span class="k">from</span> newsfetch <span class="k">import</span> fetch
+article = fetch(url)
+article.markdown, article.confidence.overall</code></pre>
+				<p class="keynote-links">
+					<a href="https://github.com/santhoshse7en/news-fetch" target="_blank" rel="noopener">GitHub <svg><use href="#i-arrow"/></svg></a>
+					<a href="https://santhoshse7en.github.io/newsfetch_doc/" target="_blank" rel="noopener">Docs <svg><use href="#i-arrow"/></svg></a>
+					<a href="https://pypi.org/project/news-fetch/" target="_blank" rel="noopener">PyPI <svg><use href="#i-arrow"/></svg></a>
+				</p>
+			</article>
 
-				<div class="about-grid">
-					<div class="about-bio reveal">
-						<p>I'm a data engineer and technical lead with over five years of experience designing ETL pipelines, web scrapers, and secure backend systems. At Digitap.ai I guide architecture and design decisions, lead and mentor a team of engineers, and bridge communication between technical and non-technical stakeholders.</p>
-						<p>Outside of my day job, I maintain 11 open-source packages across PyPI and npm — spanning encryption toolkits, code-quality analyzers, and data/web-scraping utilities — built for developers who need reliable building blocks. The most widely used is <strong>news-fetch</strong>, a Python article extractor with 230+ stars and 110+ forks on GitHub. Version 1.1 shipped in November 2026.</p>
-
-						<div class="about-facts">
-							<div class="fact"><div class="label">Role</div><div class="value">Technical Lead, Digitap.ai</div></div>
-							<div class="fact"><div class="label">Location</div><div class="value">Bengaluru, India</div></div>
-							<div class="fact"><div class="label">Focus</div><div class="value">Data Engineering &amp; Architecture</div></div>
-							<div class="fact"><div class="label">Open Source</div><div class="value">11 packages shipped</div></div>
-						</div>
-					</div>
-
-					<div class="about-card reveal">
-						<div class="stat-row"><span class="num"><span class="count" data-count="5">0</span>+</span><span class="label">years leading data engineering &amp; architecture</span></div>
-						<div class="stat-row"><span class="num"><span class="count" data-count="11">0</span></span><span class="label">open-source packages published</span></div>
-						<div class="stat-row"><span class="num"><span class="count" data-count="9">0</span> / <span class="count" data-count="2">0</span></span><span class="label">packages on PyPI / npm</span></div>
-						<div class="stat-row"><span class="num">2018</span><span class="label">building software professionally since</span></div>
-					</div>
-				</div>
-			</div>
+			<article class="keynote keynote--product">
+				<header class="keynote-head">
+					<span class="track">Product · Digitap.ai</span>
+					<span class="tnum">Live</span>
+				</header>
+				<h2><a href="https://devtools.digitap.ai/" target="_blank" rel="noopener">Dev Tools</a></h2>
+				<p class="keynote-lede">A free suite of privacy-first developer utilities that run entirely in the browser. Nothing is uploaded or tracked, it works offline, and you don't need an account.</p>
+				<p class="keynote-proof tnum"><strong>39+</strong> tools <span aria-hidden="true">·</span> <strong>8</strong> categories <span aria-hidden="true">·</span> <strong>0</strong> uploads</p>
+				<ul class="keynote-tools" aria-label="Popular tools">
+					<li>JSON Formatter</li><li>JWT Debugger</li><li>Base64</li><li>Hash Generator</li><li>SQL Formatter</li><li>UUID</li><li>Regex Tester</li><li>PDF tools</li>
+				</ul>
+				<p class="keynote-links">
+					<a href="https://devtools.digitap.ai/" target="_blank" rel="noopener">Open Dev Tools <svg><use href="#i-arrow"/></svg></a>
+				</p>
+			</article>
 		</section>
 
-		<section class="goto-here" id="resume-section">
-			<div class="container">
-				<div class="section-head reveal">
-					<span class="eyebrow">Resume</span>
-					<h2>Experience, education &amp; skills</h2>
-				</div>
-
-				<div class="resume-layout reveal">
-					<div class="resume-tabs" role="tablist" aria-label="Resume sections" aria-orientation="vertical">
-						<button id="tabbtn-experience" class="active" data-tab="tab-experience" role="tab" aria-selected="true" aria-controls="tab-experience" tabindex="0">Experience</button>
-						<button id="tabbtn-education" data-tab="tab-education" role="tab" aria-selected="false" aria-controls="tab-education" tabindex="-1">Education</button>
-						<button id="tabbtn-skills" data-tab="tab-skills" role="tab" aria-selected="false" aria-controls="tab-skills" tabindex="-1">Skills</button>
-						<button id="tabbtn-awards" data-tab="tab-awards" role="tab" aria-selected="false" aria-controls="tab-awards" tabindex="-1">Awards</button>
-						<button id="tabbtn-publications" data-tab="tab-publications" role="tab" aria-selected="false" aria-controls="tab-publications" tabindex="-1">Publications</button>
-					</div>
-
-					<div class="resume-content">
-						<div id="tab-experience" class="resume-panel active" role="tabpanel" aria-labelledby="tabbtn-experience" tabindex="0">
-							<div class="timeline">
-								<div class="timeline-item current">
-									<span class="org-badge">DT</span>
-									<span class="timeline-date">May 2024 — Present <span class="badge-current">Current</span></span>
-									<h3>Technical Lead</h3>
-									<span class="org">Digitap.ai · Bengaluru</span>
-									<ul>
-										<li>Guide architecture &amp; design decisions</li>
-										<li>Bridge technical and non-technical teams</li>
-										<li>Monitor systems &amp; service performance</li>
-										<li>Lead and mentor engineers</li>
-										<li>Design data pipelines &amp; product architecture</li>
-										<li>Built <a href="https://devtools.digitap.ai/" target="_blank" rel="noopener">Dev Tools</a>, 39+ privacy-first browser utilities for the developer community</li>
-									</ul>
-								</div>
-								<div class="timeline-item">
-									<span class="org-badge">FL</span>
-									<span class="timeline-date">Nov 2019 — Jul 2020</span>
-									<h3>Data Engineer</h3>
-									<span class="org"><a href="https://fanlytiks.com/" target="_blank" rel="noopener">Fanlytiks</a></span>
-									<p class="desc">Owned databases, ETL pipelines, and a GraphQL API — turning fantasy-sports data into marketing intelligence.</p>
-								</div>
-								<div class="timeline-item">
-									<span class="org-badge">FL</span>
-									<span class="timeline-date">Aug 2019 — Oct 2019</span>
-									<h3>Data Engineer Intern</h3>
-									<span class="org"><a href="https://fanlytiks.com/" target="_blank" rel="noopener">Fanlytiks</a></span>
-									<p class="desc">Analyzed and generated metrics from fantasy sports app data.</p>
-								</div>
-								<div class="timeline-item">
-									<span class="org-badge">CD</span>
-									<span class="timeline-date">Jan 2019 — Jul 2019</span>
-									<h3>Data Science Intern</h3>
-									<span class="org"><a href="https://cdri.res.in/" target="_blank" rel="noopener">CSIR - Central Drug Research Institute</a></span>
-									<p class="desc">Built crawlers collecting worldwide AA rehab-center news, then wrangled the data for analysis.</p>
-								</div>
-								<div class="timeline-item">
-									<span class="org-badge">24</span>
-									<span class="timeline-date">Jun 2018 — Dec 2018</span>
-									<h3>Research Apprentice</h3>
-									<span class="org"><a href="https://twitter.com/24FramesFactory" target="_blank" rel="noopener">24 Frames Factory</a></span>
-									<p class="desc">Crawled IMDb, Wikipedia &amp; news sites to build a dataset predicting movie box-office gross.</p>
-								</div>
-							</div>
-						</div>
-
-						<div id="tab-education" class="resume-panel" role="tabpanel" aria-labelledby="tabbtn-education" tabindex="0">
-							<div class="timeline">
-								<div class="timeline-item">
-									<span class="org-badge">JN</span>
-									<span class="timeline-date">2014 — 2018</span>
-									<h3>B.Tech, Computer Science &amp; Engineering</h3>
-									<span class="org"><a href="https://www.jntua.ac.in/" target="_blank" rel="noopener">JNTU, Anantapur</a></span>
-									<p class="desc">Coursework: Data Structures, AI &amp; Machine Learning, Computer Graphics, Probability &amp; Statistics, Human-Computer Interaction.</p>
-								</div>
-							</div>
-						</div>
-
-						<div id="tab-skills" class="resume-panel" role="tabpanel" aria-labelledby="tabbtn-skills" tabindex="0">
-							<div class="skills-grid">
-								<div class="skill-card">
-									<div class="icon-wrap"><svg><use href="#icon-database"/></svg></div>
-									<h3>Data Engineering &amp; Pipelines</h3>
-									<p>ETL processes and scrapers that scale.</p>
-									<div class="skill-tags">
-										<span class="chip">Python</span><span class="chip">SQL / RDBMS</span><span class="chip">ETL Pipelines</span><span class="chip">Web Scraping</span><span class="chip">Data Analysis</span>
-									</div>
-								</div>
-								<div class="skill-card">
-									<div class="icon-wrap"><svg><use href="#icon-shield"/></svg></div>
-									<h3>Cloud &amp; Security</h3>
-									<p>The core of Cryptorix and jwe-encryptify.</p>
-									<div class="skill-tags">
-										<span class="chip">AWS S3</span><span class="chip">AWS KMS</span><span class="chip">Secrets Manager</span><span class="chip">AES / RSA / JWE</span><span class="chip">Argon2 / scrypt</span>
-									</div>
-								</div>
-								<div class="skill-card">
-									<div class="icon-wrap"><svg><use href="#icon-layers"/></svg></div>
-									<h3>Architecture &amp; Leadership</h3>
-									<p>Owning system design, growing the team.</p>
-									<div class="skill-tags">
-										<span class="chip">System Design</span><span class="chip">Team Mentoring</span><span class="chip">Technical Strategy</span><span class="chip">Stakeholder Comms</span>
-									</div>
-								</div>
-								<div class="skill-card">
-									<div class="icon-wrap"><svg><use href="#icon-terminal"/></svg></div>
-									<h3>Open Source &amp; Tooling</h3>
-									<p>Shipping packages across two ecosystems.</p>
-									<div class="skill-tags">
-										<span class="chip">Python Packaging</span><span class="chip">Node.js / npm</span><span class="chip">CLI Tools</span><span class="chip">Static Analysis</span><span class="chip">Git</span>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div id="tab-awards" class="resume-panel" role="tabpanel" aria-labelledby="tabbtn-awards" tabindex="0">
-							<div class="card-grid">
-								<div class="info-card">
-									<span class="date">Mar 2018</span>
-									<h3>Runner Up — Smart India Hackathon 2018</h3>
-									<p>Trained a deep-learning model on 40k crack images to replace manual UAV structural inspections.</p>
-								</div>
-								<div class="info-card">
-									<span class="date">Aug 2017</span>
-									<h3>Runner Up — Berkeley University Hackathon 2017</h3>
-									<p>Built a voice-assistant app helping under-educated villagers offer services to tourists.</p>
-								</div>
-							</div>
-						</div>
-
-						<div id="tab-publications" class="resume-panel" role="tabpanel" aria-labelledby="tabbtn-publications" tabindex="0">
-							<div class="card-grid">
-								<div class="info-card">
-									<span class="date">Mar 2019</span>
-									<h3>Box-Office Revenue Estimation for Telugu Movie Industry Using Predictive Analytic Techniques</h3>
-									<span class="sub"><a href="https://www.ijrte.org/wp-content/uploads/papers/v7i6/F2494037619.pdf" target="_blank" rel="noopener">IJRTE</a></span>
-									<p>Applied ML and NLP on IMDb/Wikipedia data to predict a film's opening and total box-office gross.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+		<section class="timetable wrap" id="work" aria-labelledby="work-title">
+			<div class="section-bar">
+				<h2 id="work-title">Everything I've shipped</h2>
+				<div class="tracks" role="group" aria-label="Filter by track">
+					<button type="button" class="is-on" data-track="all" aria-pressed="true">All</button>
+					<button type="button" data-track="pypi" aria-pressed="false"><i class="sw sw--python"></i>PyPI</button>
+					<button type="button" data-track="npm" aria-pressed="false"><i class="sw sw--npm"></i>npm</button>
+					<button type="button" data-track="github" aria-pressed="false"><i class="sw sw--github"></i>GitHub</button>
 				</div>
 			</div>
+
+			<ol class="sessions">
+				<li data-track="pypi"><time class="tnum">Jul 2026</time><a href="https://pypi.org/project/py-codexray/" target="_blank" rel="noopener"><b>py-codexray</b><span>Python code-health analyzer: one command for quality, security, types, architecture and test insights.</span></a><i class="sw sw--python" title="PyPI"></i></li>
+				<li data-track="pypi"><time class="tnum">Jul 2026</time><a href="https://pypi.org/project/Cryptorix/" target="_blank" rel="noopener"><b>Cryptorix</b><span>Encryption toolkit: AES, Fernet, JWE, hybrid RSA+AES, Argon2id/scrypt, AWS KMS and Secrets Manager.</span></a><i class="sw sw--python" title="PyPI"></i></li>
+				<li data-track="npm"><time class="tnum">Jul 2026</time><a href="https://www.npmjs.com/package/@santhoshse7en/aictx" target="_blank" rel="noopener"><b>aictx</b><span>A shared, version-controlled project memory in .ai/ that every AI coding tool can read and update.</span></a><i class="sw sw--npm" title="npm"></i></li>
+				<li data-track="npm"><time class="tnum">Jul 2026</time><a href="https://www.npmjs.com/package/@santhoshse7en/proxy-rank" target="_blank" rel="noopener"><b>proxy-rank</b><span>Rank proxy providers with real-world benchmarks instead of synthetic tests.</span></a><i class="sw sw--npm" title="npm"></i></li>
+				<li data-track="github"><time class="tnum">Jul 2026</time><a href="https://github.com/santhoshse7en/developer-reflex" target="_blank" rel="noopener"><b>Developer Reflex</b><span>A flight simulator for engineering judgment: practise incident decisions under time pressure.</span></a><i class="sw sw--github" title="GitHub"></i></li>
+				<li data-track="github"><time class="tnum">Jul 2026</time><a href="https://github.com/santhoshse7en/context-engineering" target="_blank" rel="noopener"><b>Context Engineering</b><span>A vendor-neutral playbook for working with AI coding assistants.</span></a><i class="sw sw--github" title="GitHub"></i></li>
+				<li data-track="github"><time class="tnum">Jul 2026</time><a href="https://github.com/santhoshse7en/code-survival" target="_blank" rel="noopener"><b>Code Survival</b><span>A browser coding game: keep typing or lose your code, or beat a timed challenge.</span></a><i class="sw sw--github" title="GitHub"></i></li>
+				<li data-track="github"><time class="tnum">Jul 2026</time><a href="https://github.com/santhoshse7en/cashflow-underwriting" target="_blank" rel="noopener"><b>cashflow-underwriting</b><span>Bank-statement analysis and explainable cash-flow credit scoring for lenders.</span></a><i class="sw sw--github" title="GitHub"></i></li>
+				<li data-track="pypi"><time class="tnum">Nov 2024</time><a href="https://pypi.org/project/jwe-encryptify/" target="_blank" rel="noopener"><b>jwe-encryptify</b><span>JSON Web Encryption backed by AWS KMS and Secrets Manager.</span></a><i class="sw sw--python" title="PyPI"></i></li>
+				<li data-track="pypi"><time class="tnum">2019 – 20</time><div class="earlier"><b>Earlier packages</b><span><a href="https://pypi.org/project/imdby/" target="_blank" rel="noopener">imdby</a>, <a href="https://pypi.org/project/tweety/" target="_blank" rel="noopener">tweety</a>, <a href="https://pypi.org/project/utuby/" target="_blank" rel="noopener">utuby</a>, <a href="https://pypi.org/project/ML-APIs/" target="_blank" rel="noopener">ML-APIs</a>, <a href="https://pypi.org/project/fizzbuzzy/" target="_blank" rel="noopener">fizzbuzzy</a>: scrapers for IMDb, Twitter and YouTube, and API wrappers.</span></div><i class="sw sw--python" title="PyPI"></i></li>
+			</ol>
 		</section>
 
-		<section id="projects-section">
-			<div class="container">
-				<div class="section-head reveal">
-					<span class="eyebrow">Open Source</span>
-					<h2>Things I've shipped</h2>
-					<p>11 packages across PyPI and npm plus a handful of GitHub projects — encryption toolkits, code-quality analyzers, data utilities, and tools for engineers.</p>
-				</div>
+		<section class="experience wrap" id="experience" aria-labelledby="exp-title">
+			<div class="speaker">
+				<h2 id="exp-title">Experience</h2>
+				<p>Data engineer turned technical lead, building ETL pipelines, scrapers and secure backend systems since 2018. At Digitap.ai I own architecture and design decisions, lead and mentor engineers, and act as the bridge between technical and business teams.</p>
 
-				<article class="spotlight reveal" aria-labelledby="spotlight-title">
-					<div class="spotlight-body">
-						<span class="spotlight-kicker"><span class="status-dot" aria-hidden="true"></span> Featured · v1.1.0 released Nov 2026</span>
-						<h3 id="spotlight-title">news-fetch</h3>
-						<p class="spotlight-tagline">Fetch news. Know why it worked.</p>
-						<p class="spotlight-desc">A Python news scraper and article extractor with its own extraction engine. Give it any news URL and it returns the title, body, Markdown, authors, date, image and publisher, plus a confidence score for each field. No API key needed.</p>
-
-						<div class="spotlight-badges">
-							<img src="https://img.shields.io/github/stars/santhoshse7en/news-fetch?style=flat-square&label=stars&color=ff7a45" alt="news-fetch GitHub stars" loading="lazy" height="20">
-							<img src="https://img.shields.io/github/forks/santhoshse7en/news-fetch?style=flat-square&label=forks&color=8b5cf6" alt="news-fetch GitHub forks" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/pyversions/news-fetch?style=flat-square&label=python" alt="Supported Python versions" loading="lazy" height="20">
-						</div>
-
-						<ul class="spotlight-features">
-							<li><strong>Markdown output</strong> for RAG and LLM pipelines: keeps headings, lists, tables and code</li>
-							<li><strong>Confidence scores and provenance</strong> showing where each field came from</li>
-							<li><strong>Bulk fetching</strong> with proxy rotation and a per-URL <code>FetchResult</code> that explains failures</li>
-							<li><strong>Hardened fetching</strong>: RFC 9309 robots.txt, 10 MiB response cap, safe XML parsing</li>
-							<li><strong>RSS and sitemap discovery</strong>, async support, disk cache, optional browser rendering</li>
-						</ul>
-
-						<div class="spotlight-cta">
-							<a class="btn btn-primary" href="https://github.com/santhoshse7en/news-fetch" target="_blank" rel="noopener"><svg><use href="#icon-github"/></svg> Star on GitHub</a>
-							<a class="btn btn-ghost" href="https://santhoshse7en.github.io/newsfetch_doc/" target="_blank" rel="noopener">Docs <svg><use href="#icon-external"/></svg></a>
-							<a class="btn btn-ghost" href="https://pypi.org/project/news-fetch/" target="_blank" rel="noopener">PyPI <svg><use href="#icon-external"/></svg></a>
-						</div>
-					</div>
-
-					<div class="spotlight-code" aria-label="news-fetch usage example">
-						<div class="code-bar">
-							<span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-							<span class="code-file">quickstart.py</span>
-							<button class="code-copy" type="button" data-copy="pip install news-fetch" aria-label="Copy install command"><svg><use href="#icon-copy"/></svg> pip install news-fetch</button>
-						</div>
-<pre><code><span class="tk-k">from</span> newsfetch <span class="tk-k">import</span> fetch, fetch_results
-
-article = fetch(<span class="tk-s">"https://example.com/story"</span>)
-article.title
-article.markdown          <span class="tk-c"># RAG-ready body</span>
-article.published_at
-article.confidence.overall <span class="tk-c"># 0.0 – 1.0</span>
-article.content_source    <span class="tk-c"># "json-ld.articleBody"</span>
-
-<span class="tk-k">for</span> r <span class="tk-k">in</span> fetch_results(urls, max_workers=<span class="tk-n">20</span>):
-    <span class="tk-k">if</span> <span class="tk-k">not</span> r.ok:
-        print(r.url, r.status, r.error)</code></pre>
-					</div>
-				</article>
-
-				<article class="spotlight spotlight--flip reveal" aria-labelledby="devtools-title">
-					<div class="spotlight-body">
-						<span class="spotlight-kicker"><span class="status-dot" aria-hidden="true"></span> Live · Built at Digitap.ai</span>
-						<h3 id="devtools-title">Dev Tools</h3>
-						<p class="spotlight-tagline">Developer utilities that run in your browser.</p>
-						<p class="spotlight-desc">A free suite of 39+ developer utilities I built for the developer community. Tools for formatting, encoding, JWT debugging, hashing, SQL, PDF and more all run locally in your browser. Nothing is uploaded or tracked, and you don't need to sign up.</p>
-
-						<dl class="spotlight-stats">
-							<div><dt>Tools</dt><dd>39+</dd></div>
-							<div><dt>Categories</dt><dd>8</dd></div>
-							<div><dt>Uploads</dt><dd>0</dd></div>
-						</dl>
-
-						<ul class="spotlight-features">
-							<li><strong>Privacy first</strong>: your data stays on your machine, with no server round-trips or tracking</li>
-							<li><strong>Works offline</strong> and needs no account</li>
-							<li><strong>Covers everyday dev work</strong>: formatting, encoding, security, generators, converters, network, PDF and utilities</li>
-							<li><strong>Keyboard-first</strong>: search every tool with Ctrl + K, plus favourites and recently used tools</li>
-						</ul>
-
-						<div class="spotlight-cta">
-							<a class="btn btn-primary" href="https://devtools.digitap.ai/" target="_blank" rel="noopener">Open Dev Tools <svg><use href="#icon-external"/></svg></a>
-						</div>
-					</div>
-
-					<a class="spotlight-visual devtools-mock" href="https://devtools.digitap.ai/" target="_blank" rel="noopener" aria-label="Open Dev Tools at devtools.digitap.ai">
-						<div class="code-bar">
-							<span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-							<span class="dt-url">devtools.digitap.ai</span>
-						</div>
-						<div class="dt-body" aria-hidden="true">
-							<div class="dt-search"><svg><use href="#icon-search"/></svg><span>Search tools…</span><kbd>Ctrl K</kbd></div>
-							<ul class="dt-grid">
-								<li><span class="dt-glyph" aria-hidden="true">{ }</span><span class="dt-name">JSON Formatter<small>Format · validate · repair</small></span></li>
-								<li><span class="dt-glyph" aria-hidden="true">64</span><span class="dt-name">Base64<small>Encode / decode</small></span></li>
-								<li><span class="dt-glyph" aria-hidden="true">JWT</span><span class="dt-name">JWT Debugger<small>Inspect tokens</small></span></li>
-								<li><span class="dt-glyph" aria-hidden="true">#</span><span class="dt-name">Hash Generator<small>SHA-256, SHA-512</small></span></li>
-								<li><span class="dt-glyph" aria-hidden="true">SQL</span><span class="dt-name">SQL Formatter<small>Format queries</small></span></li>
-								<li><span class="dt-glyph" aria-hidden="true">ID</span><span class="dt-name">UUID Generator<small>v4 and v8</small></span></li>
-							</ul>
-							<p class="dt-foot"><span class="dt-tag">offline</span> Every tool runs locally, with no uploads</p>
-						</div>
-					</a>
-				</article>
-
-				<div class="project-controls reveal">
-					<div class="project-filters">
-						<button class="active" data-filter="all">All (15)</button>
-						<button data-filter="pypi">PyPI (9)</button>
-						<button data-filter="npm">npm (2)</button>
-						<button data-filter="github">GitHub (4)</button>
-					</div>
-
-					<label class="project-search">
-						<svg><use href="#icon-search"/></svg>
-						<input type="text" id="project-search" placeholder="Search projects…" autocomplete="off" aria-label="Search projects">
-					</label>
-				</div>
-
-				<div class="project-grid reveal">
-
-					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/py-codexray/" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-package"/></svg></span>
-							<span class="chip">pypi</span>
-						</div>
-						<h3>py-codexray</h3>
-						<p>The ultimate Python code health analyzer — unified static analysis, architecture insights, and engineering recommendations.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/pypi/v/py-codexray?style=flat-square&label=version&color=8b5cf6" alt="py-codexray version" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/dm/py-codexray?style=flat-square&label=downloads&color=ff7a45" alt="py-codexray monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="npm" href="https://www.npmjs.com/package/@santhoshse7en/aictx" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-terminal"/></svg></span>
-							<span class="chip">npm</span>
-						</div>
-						<h3>@santhoshse7en/aictx</h3>
-						<p>A shared, version-controlled project brain in .ai/ that Claude, Cursor, ChatGPT, Codex, Gemini, and any future AI tool can all read and update.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/npm/v/@santhoshse7en/aictx?style=flat-square&label=version&color=8b5cf6" alt="aictx version" loading="lazy" height="20">
-							<img src="https://img.shields.io/npm/dm/@santhoshse7en/aictx?style=flat-square&label=downloads&color=ff7a45" alt="aictx monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/Cryptorix/" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-package"/></svg></span>
-							<span class="chip">pypi</span>
-						</div>
-						<h3>Cryptorix</h3>
-						<p>Lightweight Python toolkit for AES, Fernet, JWE, hybrid RSA+AES encryption, format-preserving encryption, Argon2id/scrypt/HKDF key derivation, AWS KMS, and AWS Secrets Manager.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/pypi/v/Cryptorix?style=flat-square&label=version&color=8b5cf6" alt="Cryptorix version" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/dm/Cryptorix?style=flat-square&label=downloads&color=ff7a45" alt="Cryptorix monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="npm" href="https://www.npmjs.com/package/@santhoshse7en/proxy-rank" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-terminal"/></svg></span>
-							<span class="chip">npm</span>
-						</div>
-						<h3>@santhoshse7en/proxy-rank</h3>
-						<p>ProxyRank — rank proxy providers with real-world benchmarks.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/npm/v/@santhoshse7en/proxy-rank?style=flat-square&label=version&color=8b5cf6" alt="proxy-rank version" loading="lazy" height="20">
-							<img src="https://img.shields.io/npm/dm/@santhoshse7en/proxy-rank?style=flat-square&label=downloads&color=ff7a45" alt="proxy-rank monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/news-fetch/" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-package"/></svg></span>
-							<span class="chip">pypi</span>
-						</div>
-						<h3>news-fetch</h3>
-						<p>News scraper and article extractor with confidence scores, Markdown output, bulk fetching with proxies, and RSS/sitemap discovery. 230+ stars on GitHub.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/pypi/v/news-fetch?style=flat-square&label=version&color=8b5cf6" alt="news-fetch version" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/dm/news-fetch?style=flat-square&label=downloads&color=ff7a45" alt="news-fetch monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Nov 2026</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/jwe-encryptify/" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-package"/></svg></span>
-							<span class="chip">pypi</span>
-						</div>
-						<h3>jwe-encryptify</h3>
-						<p>Facilitates JSON Web Encryption (JWE) with enhanced security, leveraging AWS KMS and Secrets Manager for secure input/output handling.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/pypi/v/jwe-encryptify?style=flat-square&label=version&color=8b5cf6" alt="jwe-encryptify version" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/dm/jwe-encryptify?style=flat-square&label=downloads&color=ff7a45" alt="jwe-encryptify monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Nov 2024</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/imdby/" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-package"/></svg></span>
-							<span class="chip">pypi</span>
-						</div>
-						<h3>imdby</h3>
-						<p>Python package to access IMDb's database.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/pypi/v/imdby?style=flat-square&label=version&color=8b5cf6" alt="imdby version" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/dm/imdby?style=flat-square&label=downloads&color=ff7a45" alt="imdby monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Apr 2020</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/ML-APIs/" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-package"/></svg></span>
-							<span class="chip">pypi</span>
-						</div>
-						<h3>ML-APIs</h3>
-						<p>A package for Google's Machine Learning APIs.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/pypi/v/ML-APIs?style=flat-square&label=version&color=8b5cf6" alt="ML-APIs version" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/dm/ML-APIs?style=flat-square&label=downloads&color=ff7a45" alt="ML-APIs monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jan 2020</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/tweety/" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-package"/></svg></span>
-							<span class="chip">pypi</span>
-						</div>
-						<h3>tweety</h3>
-						<p>Python package to access the Twitter database without an API.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/pypi/v/tweety?style=flat-square&label=version&color=8b5cf6" alt="tweety version" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/dm/tweety?style=flat-square&label=downloads&color=ff7a45" alt="tweety monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jul 2019</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/utuby/" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-package"/></svg></span>
-							<span class="chip">pypi</span>
-						</div>
-						<h3>utuby</h3>
-						<p>Python package to access the YouTube database without an API.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/pypi/v/utuby?style=flat-square&label=version&color=8b5cf6" alt="utuby version" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/dm/utuby?style=flat-square&label=downloads&color=ff7a45" alt="utuby monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">May 2019</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/fizzbuzzy/" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-package"/></svg></span>
-							<span class="chip">pypi</span>
-						</div>
-						<h3>fizzbuzzy</h3>
-						<p>Prints Fizz, Buzz, FizzBuzz for numbers divisible by 3 and 5, and both.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/pypi/v/fizzbuzzy?style=flat-square&label=version&color=8b5cf6" alt="fizzbuzzy version" loading="lazy" height="20">
-							<img src="https://img.shields.io/pypi/dm/fizzbuzzy?style=flat-square&label=downloads&color=ff7a45" alt="fizzbuzzy monthly downloads" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">May 2019</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-
-					<a class="project-card" data-platform="github" href="https://github.com/santhoshse7en/developer-reflex" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-github"/></svg></span>
-							<span class="chip">github</span>
-						</div>
-						<h3>Developer Reflex</h3>
-						<p>A flight simulator for engineering judgment: work through incident scenarios by forming hypotheses, choosing which evidence to check, and stating your confidence before you commit. No code editor involved.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/github/languages/top/santhoshse7en/developer-reflex?style=flat-square&color=8b5cf6" alt="developer-reflex top language" loading="lazy" height="20">
-							<img src="https://img.shields.io/github/last-commit/santhoshse7en/developer-reflex?style=flat-square&label=updated&color=ff7a45" alt="developer-reflex last commit" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">Source <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="github" href="https://github.com/santhoshse7en/code-survival" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-github"/></svg></span>
-							<span class="chip">github</span>
-						</div>
-						<h3>Code Survival</h3>
-						<p>A browser-only coding game. Survival mode deletes your code if you stop typing; Challenge mode gives you a timed programming problem. No backend and no accounts.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/github/languages/top/santhoshse7en/code-survival?style=flat-square&color=8b5cf6" alt="code-survival top language" loading="lazy" height="20">
-							<img src="https://img.shields.io/github/last-commit/santhoshse7en/code-survival?style=flat-square&label=updated&color=ff7a45" alt="code-survival last commit" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">Source <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="github" href="https://github.com/santhoshse7en/context-engineering" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-github"/></svg></span>
-							<span class="chip">github</span>
-						</div>
-						<h3>Context Engineering</h3>
-						<p>A vendor-neutral playbook for working with AI coding assistants: deciding what the model sees, when it sees it, and what it remembers between sessions.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/badge/type-playbook-8b5cf6?style=flat-square" alt="context-engineering is a written playbook" loading="lazy" height="20">
-							<img src="https://img.shields.io/github/last-commit/santhoshse7en/context-engineering?style=flat-square&label=updated&color=ff7a45" alt="context-engineering last commit" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">Source <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-
-					<a class="project-card" data-platform="github" href="https://github.com/santhoshse7en/cashflow-underwriting" target="_blank" rel="noopener">
-						<div class="project-top">
-							<span class="project-platform"><svg><use href="#icon-github"/></svg></span>
-							<span class="chip">github</span>
-						</div>
-						<h3>cashflow-underwriting</h3>
-						<p>Bank-statement analysis and explainable cash-flow credit scoring for lenders assessing thin-file or new-to-credit borrowers.</p>
-						<div class="project-badges">
-							<img src="https://img.shields.io/github/languages/top/santhoshse7en/cashflow-underwriting?style=flat-square&color=8b5cf6" alt="cashflow-underwriting top language" loading="lazy" height="20">
-							<img src="https://img.shields.io/github/last-commit/santhoshse7en/cashflow-underwriting?style=flat-square&label=updated&color=ff7a45" alt="cashflow-underwriting last commit" loading="lazy" height="20">
-						</div>
-						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">Source <svg><use href="#icon-external"/></svg></span></div>
-					</a>
-				</div>
-
-				<p class="project-empty" id="project-empty" hidden>No projects match your search.</p>
-
-				<div class="projects-more reveal">
-					<a class="btn btn-ghost" href="https://pypi.org/user/santhoshse7en/" target="_blank" rel="noopener">All PyPI packages <svg><use href="#icon-external"/></svg></a>
-					<a class="btn btn-ghost" href="https://www.npmjs.com/~santhoshse7en" target="_blank" rel="noopener">All npm packages <svg><use href="#icon-external"/></svg></a>
-					<a class="btn btn-ghost" href="https://github.com/santhoshse7en?tab=repositories" target="_blank" rel="noopener">All GitHub repos <svg><use href="#icon-external"/></svg></a>
-				</div>
+				<dl class="skills">
+					<div><dt>Data</dt><dd>Python, SQL, ETL pipelines, web scraping, data analysis</dd></div>
+					<div><dt>Cloud &amp; security</dt><dd>AWS S3, KMS, Secrets Manager, AES / RSA / JWE, Argon2</dd></div>
+					<div><dt>Leadership</dt><dd>System design, technical strategy, mentoring, stakeholder communication</dd></div>
+					<div><dt>Tooling</dt><dd>Python packaging, Node.js / npm, CLI tools, static analysis</dd></div>
+				</dl>
 			</div>
+
+			<ol class="career">
+				<li class="is-now">
+					<time class="tnum">May 2024 – now</time>
+					<h3>Technical Lead <span>Digitap.ai, Bengaluru</span></h3>
+					<p>Lead architecture and design and mentor the engineering team. Design data pipelines and product architecture and monitor service performance. Built <a href="https://devtools.digitap.ai/" target="_blank" rel="noopener">Dev Tools</a> for the developer community.</p>
+				</li>
+				<li>
+					<time class="tnum">2019 – 2020</time>
+					<h3>Data Engineer <span><a href="https://fanlytiks.com/" target="_blank" rel="noopener">Fanlytiks</a></span></h3>
+					<p>Owned the databases, ETL pipelines and a GraphQL API that turned fantasy-sports data into marketing intelligence. Joined as an intern in Aug 2019.</p>
+				</li>
+				<li>
+					<time class="tnum">Jan – Jul 2019</time>
+					<h3>Data Science Intern <span><a href="https://cdri.res.in/" target="_blank" rel="noopener">CSIR – Central Drug Research Institute</a></span></h3>
+					<p>Built crawlers that collected news about rehab centres worldwide, then cleaned the data for analysis.</p>
+				</li>
+				<li>
+					<time class="tnum">Jun – Dec 2018</time>
+					<h3>Research Apprentice <span>24 Frames Factory</span></h3>
+					<p>Crawled IMDb, Wikipedia and news sites to build a dataset for predicting box-office gross.</p>
+				</li>
+				<li class="career-also">
+					<time class="tnum">2014 – 2019</time>
+					<h3>Education &amp; recognition</h3>
+					<ul>
+						<li>B.Tech, Computer Science &amp; Engineering — <a href="https://www.jntua.ac.in/" target="_blank" rel="noopener">JNTU Anantapur</a>, 2014–2018</li>
+						<li>Runner-up, Smart India Hackathon 2018: a deep-learning model for UAV crack inspection</li>
+						<li>Runner-up, Berkeley University Hackathon 2017: a voice assistant for village tourism</li>
+						<li>Paper: <a href="https://www.ijrte.org/wp-content/uploads/papers/v7i6/F2494037619.pdf" target="_blank" rel="noopener">Box-office revenue estimation for Telugu films</a>, IJRTE 2019</li>
+					</ul>
+				</li>
+			</ol>
 		</section>
 
-		<section id="contact-section">
-			<div class="container">
-				<div class="contact-card reveal">
-					<span class="eyebrow" style="justify-content:center">Contact</span>
-					<h2>Let's build something reliable together</h2>
-					<p>Open to interesting conversations about data engineering, architecture, or open source — reach out anytime.</p>
-					<div class="contact-actions">
-						<a href="mailto:santhoshse7en@gmail.com" class="btn btn-primary"><svg><use href="#icon-mail"/></svg> santhoshse7en@gmail.com</a>
-						<button class="icon-btn copy-email-btn" type="button" data-email="santhoshse7en@gmail.com" aria-label="Copy email address"><svg><use href="#icon-copy"/></svg></button>
-						<a href="https://drive.google.com/uc?id=1Vhc5wcg0-SGWfR5hgnRFZotR65r9IOA7&export=download" class="btn btn-ghost"><svg><use href="#icon-download"/></svg> Résumé</a>
-					</div>
-					<div class="contact-social">
-						<a class="icon-btn" href="https://www.linkedin.com/in/m-santhosh-kumar/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg><use href="#icon-linkedin"/></svg></a>
-						<a class="icon-btn" href="https://github.com/santhoshse7en" aria-label="GitHub" target="_blank" rel="noopener"><svg><use href="#icon-github"/></svg></a>
-						<a class="icon-btn" href="https://pypi.org/user/santhoshse7en/" aria-label="PyPI" target="_blank" rel="noopener"><svg><use href="#icon-package"/></svg></a>
-						<a class="icon-btn" href="https://www.npmjs.com/~santhoshse7en" aria-label="npm" target="_blank" rel="noopener"><svg><use href="#icon-terminal"/></svg></a>
-					</div>
+		<section class="close" id="contact" aria-labelledby="contact-title">
+			<div class="wrap close-inner">
+				<h2 id="contact-title">Hiring for a lead role, or building something new? Let's talk.</h2>
+				<div class="close-actions">
+					<a class="close-email" href="mailto:santhoshse7en@gmail.com">santhoshse7en@gmail.com</a>
+					<button class="copy-btn" type="button" data-copy="santhoshse7en@gmail.com" aria-label="Copy email address"><svg><use href="#i-copy"/></svg><span>Copy</span></button>
 				</div>
+				<p class="close-links">
+					<a href="https://drive.google.com/uc?id=1Vhc5wcg0-SGWfR5hgnRFZotR65r9IOA7&export=download">Download résumé</a>
+					<a href="https://www.linkedin.com/in/m-santhosh-kumar/" target="_blank" rel="noopener">LinkedIn</a>
+					<a href="https://github.com/santhoshse7en" target="_blank" rel="noopener">GitHub</a>
+				</p>
 			</div>
+			<footer class="wrap colophon">
+				<span>© <span id="year" class="tnum">2026</span> M Santhosh Kumar</span>
+				<span>Static HTML, no trackers</span>
+			</footer>
 		</section>
 
 	</main>
 
-	<footer class="site-footer">
-		<div class="container footer-bottom">
-			<a class="brand" href="#home">
-				<span class="mark">SK</span> Santhosh Kumar
-			</a>
-			<span>&copy; <span id="year"></span> All rights reserved.</span>
-		</div>
-	</footer>
-
-	<button class="icon-btn back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-		<svg><use href="#icon-arrow-up"/></svg>
-	</button>
-
-	<script src="js/main.js?v=2026-11-15"></script>
+	<div class="toast" id="toast" role="status" aria-live="polite"></div>
+	<script src="js/main.js?v=2026-11-15b"></script>
 </body>
 
 </html>
