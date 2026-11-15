@@ -6,15 +6,30 @@
 
 	/* ---------- Theme toggle (follows the system until chosen) ---------- */
 	var themeBtn = document.querySelector(".theme-btn");
+	var darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+	function currentTheme() {
+		return root.getAttribute("data-theme") || (darkQuery.matches ? "dark" : "light");
+	}
+	function syncTheme() {
+		var theme = currentTheme();
+		var label = theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
+		if (themeBtn) {
+			themeBtn.setAttribute("aria-label", label);
+			themeBtn.setAttribute("title", label);
+		}
+		var bg = getComputedStyle(root).getPropertyValue("--paper").trim();
+		document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.setAttribute("content", bg); });
+	}
 	if (themeBtn) {
 		themeBtn.addEventListener("click", function () {
-			var current = root.getAttribute("data-theme") ||
-				(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-			var next = current === "dark" ? "light" : "dark";
+			var next = currentTheme() === "dark" ? "light" : "dark";
 			root.setAttribute("data-theme", next);
 			try { localStorage.setItem("theme", next); } catch (e) {}
+			syncTheme();
 		});
 	}
+	if (darkQuery.addEventListener) darkQuery.addEventListener("change", syncTheme);
+	syncTheme();
 
 	/* ---------- Toast ---------- */
 	var toastEl = document.getElementById("toast");
@@ -84,6 +99,28 @@
 			})
 			.catch(function () {});
 	}
+
+	/* ---------- Current section in the nav ---------- */
+	var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav a[href^='#']"));
+	var navTargets = navLinks.map(function (link) { return document.querySelector(link.getAttribute("href")); });
+	var spyQueued = false;
+	function updateCurrent() {
+		spyQueued = false;
+		var line = window.innerHeight * 0.45;
+		var current = -1;
+		navTargets.forEach(function (el, i) {
+			if (el && el.getBoundingClientRect().top <= line) current = i;
+		});
+		if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = navTargets.length - 1;
+		navLinks.forEach(function (link, i) {
+			if (i === current) link.setAttribute("aria-current", "true");
+			else link.removeAttribute("aria-current");
+		});
+	}
+	window.addEventListener("scroll", function () {
+		if (!spyQueued) { spyQueued = true; requestAnimationFrame(updateCurrent); }
+	}, { passive: true });
+	updateCurrent();
 
 	/* ---------- Footer year ---------- */
 	var yearEl = document.getElementById("year");
