@@ -134,8 +134,8 @@
 					<p class="kicker">Currently building at Digitap.ai · Bengaluru, India</p>
 				</div>
 				<h1>M Santhosh <span class="grad">Kumar</span></h1>
-				<p class="role-line">I build <span class="role-rotate" data-roles='["scalable data pipelines.","secure Python packages.","open-source dev tools.","engineering teams."]'></span></p>
-				<p class="lede">Technical Lead at Digitap.ai with 5+ years designing data pipelines, security tooling, and product architecture — and the maintainer of 11 open-source packages on PyPI and npm.</p>
+				<p class="role-line">I build <span class="role-rotate" data-roles='["scalable data pipelines.","secure Python packages.","open-source dev tools.","privacy-first browser tools.","engineering teams."]'></span></p>
+				<p class="lede">Technical Lead at Digitap.ai with 5+ years designing data pipelines, security tooling, and product architecture — and the maintainer of 11 open-source packages on PyPI and npm, including <a href="https://github.com/santhoshse7en/news-fetch" target="_blank" rel="noopener">news-fetch</a> (230+ ★).</p>
 
 				<div class="hero-cta">
 					<a href="#projects-section" class="btn btn-primary">
@@ -168,7 +168,7 @@
 				<div class="about-grid">
 					<div class="about-bio reveal">
 						<p>I'm a data engineer and technical lead with over five years of experience designing ETL pipelines, web scrapers, and secure backend systems. At Digitap.ai I guide architecture and design decisions, lead and mentor a team of engineers, and bridge communication between technical and non-technical stakeholders.</p>
-						<p>Outside of my day job, I maintain 11 open-source packages across PyPI and npm — spanning encryption toolkits, code-quality analyzers, and data/web-scraping utilities — built for developers who need reliable building blocks.</p>
+						<p>Outside of my day job, I maintain 11 open-source packages across PyPI and npm — spanning encryption toolkits, code-quality analyzers, and data/web-scraping utilities — built for developers who need reliable building blocks. The most widely used is <strong>news-fetch</strong>, a Python article extractor with 230+ stars and 110+ forks on GitHub. Version 1.1 shipped in November 2026.</p>
 
 						<div class="about-facts">
 							<div class="fact"><div class="label">Role</div><div class="value">Technical Lead, Digitap.ai</div></div>
@@ -218,6 +218,7 @@
 										<li>Monitor systems &amp; service performance</li>
 										<li>Lead and mentor engineers</li>
 										<li>Design data pipelines &amp; product architecture</li>
+										<li>Built <a href="https://devtools.digitap.ai/" target="_blank" rel="noopener">Dev Tools</a>, 39+ privacy-first browser utilities for the developer community</li>
 									</ul>
 								</div>
 								<div class="timeline-item">
@@ -334,20 +335,115 @@
 			<div class="container">
 				<div class="section-head reveal">
 					<span class="eyebrow">Open Source</span>
-					<h2>Packages I've shipped</h2>
-					<p>11 packages across PyPI and npm — encryption toolkits, code-quality analyzers, and data utilities, built for developers who need reliable building blocks.</p>
+					<h2>Things I've shipped</h2>
+					<p>11 packages across PyPI and npm plus a handful of GitHub projects — encryption toolkits, code-quality analyzers, data utilities, and tools for engineers.</p>
 				</div>
+
+				<article class="spotlight reveal" aria-labelledby="spotlight-title">
+					<div class="spotlight-body">
+						<span class="spotlight-kicker"><span class="status-dot" aria-hidden="true"></span> Featured · v1.1.0 released Nov 2026</span>
+						<h3 id="spotlight-title">news-fetch</h3>
+						<p class="spotlight-tagline">Fetch news. Know why it worked.</p>
+						<p class="spotlight-desc">A Python news scraper and article extractor with its own extraction engine. Give it any news URL and it returns the title, body, Markdown, authors, date, image and publisher, plus a confidence score for each field. No API key needed.</p>
+
+						<div class="spotlight-badges">
+							<img src="https://img.shields.io/github/stars/santhoshse7en/news-fetch?style=flat-square&label=stars&color=ff7a45" alt="news-fetch GitHub stars" loading="lazy" height="20">
+							<img src="https://img.shields.io/github/forks/santhoshse7en/news-fetch?style=flat-square&label=forks&color=8b5cf6" alt="news-fetch GitHub forks" loading="lazy" height="20">
+							<img src="https://img.shields.io/pypi/pyversions/news-fetch?style=flat-square&label=python" alt="Supported Python versions" loading="lazy" height="20">
+						</div>
+
+						<ul class="spotlight-features">
+							<li><strong>Markdown output</strong> for RAG and LLM pipelines: keeps headings, lists, tables and code</li>
+							<li><strong>Confidence scores and provenance</strong> showing where each field came from</li>
+							<li><strong>Bulk fetching</strong> with proxy rotation and a per-URL <code>FetchResult</code> that explains failures</li>
+							<li><strong>Hardened fetching</strong>: RFC 9309 robots.txt, 10 MiB response cap, safe XML parsing</li>
+							<li><strong>RSS and sitemap discovery</strong>, async support, disk cache, optional browser rendering</li>
+						</ul>
+
+						<div class="spotlight-cta">
+							<a class="btn btn-primary" href="https://github.com/santhoshse7en/news-fetch" target="_blank" rel="noopener"><svg><use href="#icon-github"/></svg> Star on GitHub</a>
+							<a class="btn btn-ghost" href="https://santhoshse7en.github.io/newsfetch_doc/" target="_blank" rel="noopener">Docs <svg><use href="#icon-external"/></svg></a>
+							<a class="btn btn-ghost" href="https://pypi.org/project/news-fetch/" target="_blank" rel="noopener">PyPI <svg><use href="#icon-external"/></svg></a>
+						</div>
+					</div>
+
+					<div class="spotlight-code" aria-label="news-fetch usage example">
+						<div class="code-bar">
+							<span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+							<span class="code-file">quickstart.py</span>
+							<button class="code-copy" type="button" data-copy="pip install news-fetch" aria-label="Copy install command"><svg><use href="#icon-copy"/></svg> pip install news-fetch</button>
+						</div>
+<pre><code><span class="tk-k">from</span> newsfetch <span class="tk-k">import</span> fetch, fetch_results
+
+article = fetch(<span class="tk-s">"https://example.com/story"</span>)
+article.title
+article.markdown          <span class="tk-c"># RAG-ready body</span>
+article.published_at
+article.confidence.overall <span class="tk-c"># 0.0 – 1.0</span>
+article.content_source    <span class="tk-c"># "json-ld.articleBody"</span>
+
+<span class="tk-k">for</span> r <span class="tk-k">in</span> fetch_results(urls, max_workers=<span class="tk-n">20</span>):
+    <span class="tk-k">if</span> <span class="tk-k">not</span> r.ok:
+        print(r.url, r.status, r.error)</code></pre>
+					</div>
+				</article>
+
+				<article class="spotlight spotlight--flip reveal" aria-labelledby="devtools-title">
+					<div class="spotlight-body">
+						<span class="spotlight-kicker"><span class="status-dot" aria-hidden="true"></span> Live · Built at Digitap.ai</span>
+						<h3 id="devtools-title">Dev Tools</h3>
+						<p class="spotlight-tagline">Developer utilities that run in your browser.</p>
+						<p class="spotlight-desc">A free suite of 39+ developer utilities I built for the developer community. Tools for formatting, encoding, JWT debugging, hashing, SQL, PDF and more all run locally in your browser. Nothing is uploaded or tracked, and you don't need to sign up.</p>
+
+						<dl class="spotlight-stats">
+							<div><dt>Tools</dt><dd>39+</dd></div>
+							<div><dt>Categories</dt><dd>8</dd></div>
+							<div><dt>Uploads</dt><dd>0</dd></div>
+						</dl>
+
+						<ul class="spotlight-features">
+							<li><strong>Privacy first</strong>: your data stays on your machine, with no server round-trips or tracking</li>
+							<li><strong>Works offline</strong> and needs no account</li>
+							<li><strong>Covers everyday dev work</strong>: formatting, encoding, security, generators, converters, network, PDF and utilities</li>
+							<li><strong>Keyboard-first</strong>: search every tool with Ctrl + K, plus favourites and recently used tools</li>
+						</ul>
+
+						<div class="spotlight-cta">
+							<a class="btn btn-primary" href="https://devtools.digitap.ai/" target="_blank" rel="noopener">Open Dev Tools <svg><use href="#icon-external"/></svg></a>
+						</div>
+					</div>
+
+					<a class="spotlight-visual devtools-mock" href="https://devtools.digitap.ai/" target="_blank" rel="noopener" aria-label="Open Dev Tools at devtools.digitap.ai">
+						<div class="code-bar">
+							<span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+							<span class="dt-url">devtools.digitap.ai</span>
+						</div>
+						<div class="dt-body" aria-hidden="true">
+							<div class="dt-search"><svg><use href="#icon-search"/></svg><span>Search tools…</span><kbd>Ctrl K</kbd></div>
+							<ul class="dt-grid">
+								<li><span class="dt-glyph" aria-hidden="true">{ }</span><span class="dt-name">JSON Formatter<small>Format · validate · repair</small></span></li>
+								<li><span class="dt-glyph" aria-hidden="true">64</span><span class="dt-name">Base64<small>Encode / decode</small></span></li>
+								<li><span class="dt-glyph" aria-hidden="true">JWT</span><span class="dt-name">JWT Debugger<small>Inspect tokens</small></span></li>
+								<li><span class="dt-glyph" aria-hidden="true">#</span><span class="dt-name">Hash Generator<small>SHA-256, SHA-512</small></span></li>
+								<li><span class="dt-glyph" aria-hidden="true">SQL</span><span class="dt-name">SQL Formatter<small>Format queries</small></span></li>
+								<li><span class="dt-glyph" aria-hidden="true">ID</span><span class="dt-name">UUID Generator<small>v4 and v8</small></span></li>
+							</ul>
+							<p class="dt-foot"><span class="dt-tag">offline</span> Every tool runs locally, with no uploads</p>
+						</div>
+					</a>
+				</article>
 
 				<div class="project-controls reveal">
 					<div class="project-filters">
-						<button class="active" data-filter="all">All (11)</button>
+						<button class="active" data-filter="all">All (15)</button>
 						<button data-filter="pypi">PyPI (9)</button>
 						<button data-filter="npm">npm (2)</button>
+						<button data-filter="github">GitHub (4)</button>
 					</div>
 
 					<label class="project-search">
 						<svg><use href="#icon-search"/></svg>
-						<input type="text" id="project-search" placeholder="Search packages…" autocomplete="off" aria-label="Search packages">
+						<input type="text" id="project-search" placeholder="Search projects…" autocomplete="off" aria-label="Search projects">
 					</label>
 				</div>
 
@@ -415,12 +511,12 @@
 							<span class="chip">pypi</span>
 						</div>
 						<h3>news-fetch</h3>
-						<p>Open-source, easy-to-use news extractor with basic NLP — cleans text, extracts keywords, and summarizes articles.</p>
+						<p>News scraper and article extractor with confidence scores, Markdown output, bulk fetching with proxies, and RSS/sitemap discovery. 230+ stars on GitHub.</p>
 						<div class="project-badges">
 							<img src="https://img.shields.io/pypi/v/news-fetch?style=flat-square&label=version&color=8b5cf6" alt="news-fetch version" loading="lazy" height="20">
 							<img src="https://img.shields.io/pypi/dm/news-fetch?style=flat-square&label=downloads&color=ff7a45" alt="news-fetch monthly downloads" loading="lazy" height="20">
 						</div>
-						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
+						<div class="project-meta"><span class="date">Nov 2026</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
 					</a>
 
 					<a class="project-card" data-platform="pypi" href="https://pypi.org/project/jwe-encryptify/" target="_blank" rel="noopener">
@@ -507,14 +603,70 @@
 						<div class="project-meta"><span class="date">May 2019</span><span class="link">View <svg><use href="#icon-external"/></svg></span></div>
 					</a>
 
+
+					<a class="project-card" data-platform="github" href="https://github.com/santhoshse7en/developer-reflex" target="_blank" rel="noopener">
+						<div class="project-top">
+							<span class="project-platform"><svg><use href="#icon-github"/></svg></span>
+							<span class="chip">github</span>
+						</div>
+						<h3>Developer Reflex</h3>
+						<p>A flight simulator for engineering judgment: work through incident scenarios by forming hypotheses, choosing which evidence to check, and stating your confidence before you commit. No code editor involved.</p>
+						<div class="project-badges">
+							<img src="https://img.shields.io/github/languages/top/santhoshse7en/developer-reflex?style=flat-square&color=8b5cf6" alt="developer-reflex top language" loading="lazy" height="20">
+							<img src="https://img.shields.io/github/last-commit/santhoshse7en/developer-reflex?style=flat-square&label=updated&color=ff7a45" alt="developer-reflex last commit" loading="lazy" height="20">
+						</div>
+						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">Source <svg><use href="#icon-external"/></svg></span></div>
+					</a>
+
+					<a class="project-card" data-platform="github" href="https://github.com/santhoshse7en/code-survival" target="_blank" rel="noopener">
+						<div class="project-top">
+							<span class="project-platform"><svg><use href="#icon-github"/></svg></span>
+							<span class="chip">github</span>
+						</div>
+						<h3>Code Survival</h3>
+						<p>A browser-only coding game. Survival mode deletes your code if you stop typing; Challenge mode gives you a timed programming problem. No backend and no accounts.</p>
+						<div class="project-badges">
+							<img src="https://img.shields.io/github/languages/top/santhoshse7en/code-survival?style=flat-square&color=8b5cf6" alt="code-survival top language" loading="lazy" height="20">
+							<img src="https://img.shields.io/github/last-commit/santhoshse7en/code-survival?style=flat-square&label=updated&color=ff7a45" alt="code-survival last commit" loading="lazy" height="20">
+						</div>
+						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">Source <svg><use href="#icon-external"/></svg></span></div>
+					</a>
+
+					<a class="project-card" data-platform="github" href="https://github.com/santhoshse7en/context-engineering" target="_blank" rel="noopener">
+						<div class="project-top">
+							<span class="project-platform"><svg><use href="#icon-github"/></svg></span>
+							<span class="chip">github</span>
+						</div>
+						<h3>Context Engineering</h3>
+						<p>A vendor-neutral playbook for working with AI coding assistants: deciding what the model sees, when it sees it, and what it remembers between sessions.</p>
+						<div class="project-badges">
+							<img src="https://img.shields.io/badge/type-playbook-8b5cf6?style=flat-square" alt="context-engineering is a written playbook" loading="lazy" height="20">
+							<img src="https://img.shields.io/github/last-commit/santhoshse7en/context-engineering?style=flat-square&label=updated&color=ff7a45" alt="context-engineering last commit" loading="lazy" height="20">
+						</div>
+						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">Source <svg><use href="#icon-external"/></svg></span></div>
+					</a>
+
+					<a class="project-card" data-platform="github" href="https://github.com/santhoshse7en/cashflow-underwriting" target="_blank" rel="noopener">
+						<div class="project-top">
+							<span class="project-platform"><svg><use href="#icon-github"/></svg></span>
+							<span class="chip">github</span>
+						</div>
+						<h3>cashflow-underwriting</h3>
+						<p>Bank-statement analysis and explainable cash-flow credit scoring for lenders assessing thin-file or new-to-credit borrowers.</p>
+						<div class="project-badges">
+							<img src="https://img.shields.io/github/languages/top/santhoshse7en/cashflow-underwriting?style=flat-square&color=8b5cf6" alt="cashflow-underwriting top language" loading="lazy" height="20">
+							<img src="https://img.shields.io/github/last-commit/santhoshse7en/cashflow-underwriting?style=flat-square&label=updated&color=ff7a45" alt="cashflow-underwriting last commit" loading="lazy" height="20">
+						</div>
+						<div class="project-meta"><span class="date">Jul 2026</span><span class="link">Source <svg><use href="#icon-external"/></svg></span></div>
+					</a>
 				</div>
 
-				<p class="project-empty" id="project-empty" hidden>No packages match your search.</p>
+				<p class="project-empty" id="project-empty" hidden>No projects match your search.</p>
 
 				<div class="projects-more reveal">
 					<a class="btn btn-ghost" href="https://pypi.org/user/santhoshse7en/" target="_blank" rel="noopener">All PyPI packages <svg><use href="#icon-external"/></svg></a>
-					&nbsp;
 					<a class="btn btn-ghost" href="https://www.npmjs.com/~santhoshse7en" target="_blank" rel="noopener">All npm packages <svg><use href="#icon-external"/></svg></a>
+					<a class="btn btn-ghost" href="https://github.com/santhoshse7en?tab=repositories" target="_blank" rel="noopener">All GitHub repos <svg><use href="#icon-external"/></svg></a>
 				</div>
 			</div>
 		</section>

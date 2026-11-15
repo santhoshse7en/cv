@@ -439,6 +439,17 @@
 			showToast(email);
 		}
 	}
+	document.querySelectorAll(".code-copy[data-copy]").forEach(function (btn) {
+		btn.addEventListener("click", function () {
+			var text = btn.getAttribute("data-copy");
+			if (navigator.clipboard && navigator.clipboard.writeText) {
+				navigator.clipboard.writeText(text).then(function () { showToast("Copied: " + text); }).catch(function () { showToast(text); });
+			} else {
+				showToast(text);
+			}
+		});
+	});
+
 	var copyBtn = document.querySelector(".copy-email-btn");
 	if (copyBtn) {
 		copyBtn.addEventListener("click", function () {
@@ -467,6 +478,10 @@
 			{ label: "Go to Resume", hint: "Section", action: function () { scrollToId("#resume-section"); } },
 			{ label: "Go to Projects", hint: "Section", action: function () { scrollToId("#projects-section"); } },
 			{ label: "Go to Contact", hint: "Section", action: function () { scrollToId("#contact-section"); } },
+			{ label: "Featured: news-fetch", hint: "Section", action: function () { scrollToId("#spotlight-title"); } },
+			{ label: "Open news-fetch on GitHub", hint: "↗", action: function () { window.open("https://github.com/santhoshse7en/news-fetch", "_blank", "noopener"); } },
+			{ label: "Open news-fetch docs", hint: "↗", action: function () { window.open("https://santhoshse7en.github.io/newsfetch_doc/", "_blank", "noopener"); } },
+			{ label: "Open Dev Tools (devtools.digitap.ai)", hint: "↗", action: function () { window.open("https://devtools.digitap.ai/", "_blank", "noopener"); } },
 			{ label: "Copy email address", hint: "Action", action: copyEmail },
 			{ label: "Toggle light / dark theme", hint: "Action", action: toggleTheme },
 			{ label: "Open GitHub profile", hint: "↗", action: function () { window.open("https://github.com/santhoshse7en", "_blank", "noopener"); } },
