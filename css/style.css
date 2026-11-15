@@ -124,7 +124,7 @@ h1, h2, h3 { text-wrap: balance; }
 	display: grid; place-items: center;
 	width: 36px; height: 36px;
 	background: var(--ink); color: var(--paper);
-	font-weight: 800; font-size: 0.85rem; letter-spacing: 0.02em;
+	font-weight: 800; font-size: 0.875rem; letter-spacing: 0.02em;
 	font-variation-settings: "wdth" 115;
 }
 .brand-meta { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); }
@@ -240,7 +240,7 @@ h1, h2, h3 { text-wrap: balance; }
 .keynote-code .c { color: #a9bdf5; }
 
 .keynote-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
-.keynote-tools li { padding: 5px 10px; border: 1px solid currentColor; font-size: 0.8125rem; font-weight: 600; }
+.keynote-tools li { padding: 5px 10px; border: 1px solid var(--on-product); font-size: 0.8125rem; font-weight: 600; }
 
 .keynote-links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: auto; padding-top: 22px; }
 .keynote-links a {
@@ -391,7 +391,7 @@ h1, h2, h3 { text-wrap: balance; }
 .copy-btn {
 	display: inline-flex; align-items: center; gap: 8px;
 	min-height: 40px; padding: 0 14px;
-	border: 1px solid currentColor;
+	border: 1px solid var(--paper);
 	font-size: 0.875rem; font-weight: 650;
 }
 .copy-btn svg { width: 16px; height: 16px; }
