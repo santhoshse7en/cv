@@ -17,10 +17,19 @@ colors:
   night-ink: "#ecede6"
   night-ink-soft: "#a6a8a0"
   night-rule-soft: "#34373b"
+  code-keyword: "#ffd76a"
+  code-comment: "#a9bdf5"
 typography:
   display:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
     fontSize: "clamp(2.75rem, 7.4vw, 6rem)"
+    fontWeight: 850
+    lineHeight: 0.92
+    letterSpacing: "-0.035em"
+    fontVariation: "'wdth' 125"
+  display-compact:
+    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
+    fontSize: "2.15rem"
     fontWeight: 850
     lineHeight: 0.92
     letterSpacing: "-0.035em"
@@ -32,6 +41,23 @@ typography:
     lineHeight: 0.95
     letterSpacing: "-0.03em"
     fontVariation: "'wdth' 125"
+  headline-close:
+    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(2rem, 4.8vw, 3.75rem)"
+    fontWeight: 850
+    lineHeight: 1
+    letterSpacing: "-0.03em"
+    fontVariation: "'wdth' 125"
+  contact:
+    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(1.25rem, 2.6vw, 2rem)"
+    fontWeight: 750
+  proof:
+    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
+    fontSize: "1.375rem"
+    fontWeight: 800
+    letterSpacing: "-0.01em"
+    fontFeature: "'tnum' 1"
   title:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
     fontSize: "clamp(1.75rem, 3.2vw, 2.5rem)"
@@ -52,11 +78,20 @@ typography:
     fontWeight: 400
     lineHeight: 1.55
     fontVariation: "'wdth' 100"
+  lede:
+    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.55
   body-sm:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
     fontSize: "0.9375rem"
     fontWeight: 400
     lineHeight: 1.45
+  label-ui:
+    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
+    fontSize: "0.875rem"
+    fontWeight: 650
   label:
     fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
     fontSize: "0.8125rem"
@@ -67,6 +102,10 @@ typography:
     fontFamily: "ui-monospace, SF Mono, Menlo, Consolas, monospace"
     fontSize: "0.8125rem"
     lineHeight: 1.7
+  code-compact:
+    fontFamily: "ui-monospace, SF Mono, Menlo, Consolas, monospace"
+    fontSize: "0.75rem"
+    lineHeight: 1.6
 rounded:
   none: "0px"
   dot: "50%"
@@ -169,6 +208,7 @@ The palette is a print palette: off-white paper, near-black ink, one soft grey f
 ### Secondary
 - **Product Yellow** (product-yellow): The Dev Tools keynote field, the "now" marker on the career line, text selection, the toast, the email underline in the close, and the current-section marker in dark mode. Ink text always sits on it, never white.
 - **Ochre Underprint** (product-deep): The base under the Product field during its wipe-in. Nothing else uses it.
+- **Code Gold** (code-keyword) and **Code Periwinkle** (code-comment): Syntax colours for keywords and for the prompt and comments. They are used only inside the Deep Press Blue code block and never on paper.
 
 ### Tertiary
 - **npm Track Red** (npm-red) and **GitHub Track Green** (github-green): Time-slot fields and filter chips for those tracks. Green is also the "open to work" status dot. White text sits on both.
@@ -190,17 +230,23 @@ The palette is a print palette: off-white paper, near-black ink, one soft grey f
 
 **Display Font:** Archivo variable, self-hosted (fonts/archivo-latin-var.woff2, weight 100 to 900, width 62% to 125%), with Helvetica Neue and Arial as fallbacks.
 **Body Font:** Archivo at normal width (wdth 100).
-**Label/Mono Font:** the system monospace stack, used only for the keynote code sample.
+**Label/Mono Font:** the system monospace stack, used only for the keynote code sample (0.8125rem, or 0.75rem on phones).
 
 **Character:** One family pushed to two extremes. Titles are expanded and very heavy, like an event poster. Reading text is plain and normal width, like the programme's small print.
 
 ### Hierarchy
-- **Display** (850, wdth 125, clamp 2.75rem to 6rem, line-height 0.92, -0.035em): The owner's name as the event title. Once per page. On phones under 560px it is fixed at 2.15rem.
-- **Headline** (850, wdth 125, clamp 2.25rem to 3.75rem, line-height 0.95): Keynote titles and the close's call to talk (which uses line-height 1, max 20ch).
+- **Display** (850, wdth 125, clamp 2.75rem to 6rem, line-height 0.92, -0.035em): The owner's name as the event title. Once per page.
+- **Display compact** (2.15rem, same settings): The display size at 560px and below.
+- **Headline** (850, wdth 125, clamp 2.25rem to 3.75rem, line-height 0.95): Keynote titles.
+- **Headline close** (850, wdth 125, clamp 2rem to 3.75rem, line-height 1, max 20ch): The close band's call to talk.
+- **Contact** (750, clamp 1.25rem to 2rem): The email address in the close band, with a 2px yellow underline.
+- **Proof** (800, 1.375rem, tabular): The figures in a keynote's proof line (stars, forks, tool counts).
 - **Title** (800, wdth 110, clamp 1.75rem to 2.5rem, line-height 1): Section headings that sit on a 2px rule ("Everything I've shipped", "Experience").
 - **Title small** (800, wdth 106, 1.25rem): Career role names, with the employer in 550 weight Pencil Grey beside them.
 - **Body** (400, 1.0625rem, line-height 1.55): Default reading text. Keep measures between 44ch and 62ch, as the build does.
+- **Lede** (400, 1rem, line-height 1.55): Keynote descriptions (0.9375rem on phones), and the title role line on phones.
 - **Body small** (0.9375rem, line-height 1.45): Session descriptions, career paragraphs, nav and button text.
+- **UI label** (650 to 750, 0.875rem): Track filter text, skill names, registration profile links and the copy button.
 - **Label** (750, 0.8125rem, tabular numerals): Dates inside time slots, career dates (650, Pencil Grey) and tool tags (600).
 
 ### Named Rules

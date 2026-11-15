@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-15T00:00:00Z",
+  "generatedAt": "2026-11-15T12:00:00Z",
   "title": "Design System: M Santhosh Kumar",
   "extensions": {
     "colorMeta": {
@@ -129,6 +129,16 @@
       "night-rule-soft": {
         "role": "neutral",
         "displayName": "Night Hairline"
+      },
+      "code-keyword": {
+        "role": "tertiary",
+        "displayName": "Code Gold",
+        "purpose": "Keywords inside the Deep Press Blue code block only."
+      },
+      "code-comment": {
+        "role": "tertiary",
+        "displayName": "Code Periwinkle",
+        "purpose": "Prompt and comments inside the Deep Press Blue code block only."
       }
     },
     "themes": {
@@ -146,11 +156,11 @@
     "typographyMeta": {
       "display": {
         "displayName": "Event Title",
-        "purpose": "The owner's name, once per page; 2.15rem fixed under 560px."
+        "purpose": "The owner's name, once per page."
       },
       "headline": {
         "displayName": "Keynote",
-        "purpose": "Keynote titles and the close headline."
+        "purpose": "Keynote titles."
       },
       "title": {
         "displayName": "Section Head",
@@ -175,6 +185,34 @@
       "code": {
         "displayName": "Code",
         "purpose": "Keynote code sample only, on Deep Press Blue with #ffd76a keywords and #a9bdf5 comments."
+      },
+      "display-compact": {
+        "displayName": "Event Title (phone)",
+        "purpose": "The display size at 560px and below."
+      },
+      "headline-close": {
+        "displayName": "Close Headline",
+        "purpose": "The close band's call to talk, max 20ch."
+      },
+      "contact": {
+        "displayName": "Contact",
+        "purpose": "The email address in the close band, underlined 2px in Product yellow."
+      },
+      "proof": {
+        "displayName": "Proof Figure",
+        "purpose": "Stars, forks and tool counts in a keynote's proof line."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Keynote descriptions, and the title role line on phones."
+      },
+      "label-ui": {
+        "displayName": "UI Label",
+        "purpose": "Track filters, skill names, registration links and the copy button."
+      },
+      "code-compact": {
+        "displayName": "Code (phone)",
+        "purpose": "Keynote code sample at 560px and below."
       }
     },
     "shadows": [
