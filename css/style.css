@@ -16,7 +16,6 @@
 /* ---------- Tokens ---------- */
 :root {
 	--paper: #f4f5f1;
-	--paper-2: #e9ebe4;
 	--ink: #121212;
 	--ink-2: #55574f;
 	--rule: #121212;
@@ -51,7 +50,6 @@
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme="light"]) {
 		--paper: #111214;
-		--paper-2: #1b1d20;
 		--ink: #ecede6;
 		--ink-2: #a6a8a0;
 		--rule: #ecede6;
@@ -62,7 +60,6 @@
 }
 :root[data-theme="dark"] {
 	--paper: #111214;
-	--paper-2: #1b1d20;
 	--ink: #ecede6;
 	--ink-2: #a6a8a0;
 	--rule: #ecede6;
@@ -445,9 +442,8 @@ h1, h2, h3 { text-wrap: balance; }
 	.registration .reg-links { display: none; }
 	.reg-actions { margin-top: 12px; }
 	.keynote { padding: 20px 18px 22px; }
-	.keynote-lede { font-size: 0.9375rem; }
 	.keynote-code { font-size: 0.75rem; line-height: 1.6; padding: 10px 12px; margin-top: 12px; }
-	.keynote-lede { margin-top: 10px; line-height: 1.5; }
+	.keynote-lede { margin-top: 10px; font-size: 0.9375rem; line-height: 1.5; }
 	.keynote-proof { margin-top: 10px; }
 	.keynote-links { padding-top: 12px; }
 	.title-role { font-size: 1rem; }
