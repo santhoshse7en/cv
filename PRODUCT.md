@@ -17,7 +17,7 @@ Inferred (owner delegated): two visitor scenes, both skimming in under a minute.
 A personal site for M Santhosh Kumar, a Technical Lead at Digitap.ai (Bengaluru) and data engineer. Success means a visitor quickly forms the view "experienced builder who ships real, used tools" and then emails, downloads the résumé, or opens the work. The owner asked that the site leave a strong impression and not feel bloated or like an endless scroll.
 
 ## Positioning
-He ships things other developers use: news-fetch (Python article extractor, 230+ GitHub stars, 110+ forks, v1.1.0 in Nov 2026), Dev Tools at devtools.digitap.ai (39+ privacy-first browser utilities built at Digitap.ai), and 11 packages on PyPI and npm. He also leads a team and owns architecture at a fintech company.
+His lead project is Cinematic Universe (cinematic-universe.com): an interactive 3D galaxy of 940,938 films and documentaries positioned by similarity, built from a Python ML pipeline (626-D profiles, UMAP, HDBSCAN, custom similarity ranking) and shipped as a static Three.js site with no backend. Its repository is private, so link only the live site. He also ships things other developers use: news-fetch (Python article extractor, 230+ GitHub stars, 110+ forks, v1.1.0 in Nov 2026), Dev Tools at devtools.digitap.ai (39+ privacy-first browser utilities built at Digitap.ai), and 11 packages on PyPI and npm. He also leads a team and owns architecture at a fintech company.
 
 ## Operating Context
 Static site on GitHub Pages at https://santhoshse7en.github.io/cv/, deployed by a GitHub Actions workflow that uploads the repo root. The site is plain HTML, CSS and vanilla JS with no build step. The résumé PDF is hosted on Google Drive.

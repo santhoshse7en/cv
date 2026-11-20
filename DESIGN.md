@@ -12,6 +12,9 @@ colors:
   github-green: "#19774e"
   product-yellow: "#f2c230"
   product-deep: "#d9a514"
+  cosmos-navy: "#0b1430"
+  cosmos-deep: "#060b1d"
+  cosmos-ink-soft: "#b9c3e6"
   on-track: "#ffffff"
   night-paper: "#111214"
   night-ink: "#ecede6"
@@ -208,6 +211,9 @@ The palette is a print palette: off-white paper, near-black ink, one soft grey f
 ### Secondary
 - **Product Yellow** (product-yellow): The Dev Tools keynote field, the "now" marker on the career line, text selection, the toast, the email underline in the close, and the current-section marker in dark mode. Ink text always sits on it, never white.
 - **Ochre Underprint** (product-deep): The base under the Product field during its wipe-in. Nothing else uses it.
+- **Cosmos Navy** (cosmos-navy): The field of the lead keynote, Cinematic Universe. It is that product's own brand navy and spans the full keynote row above the two track keynotes. White text on it.
+- **Cosmos Underprint** (cosmos-deep): The base under the Cosmos field during its wipe-in. Nothing else uses it.
+- **Cosmos Soft Ink** (cosmos-ink-soft): Secondary text (the technical stack line) inside the Cosmos field only, about 10:1 on cosmos-navy.
 - **Code Gold** (code-keyword) and **Code Periwinkle** (code-comment): Syntax colours for keywords and for the prompt and comments. They are used only inside the Deep Press Blue code block and never on paper.
 
 ### Tertiary

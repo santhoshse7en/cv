@@ -5,13 +5,13 @@
 	<meta charset="utf-8">
 	<title>M Santhosh Kumar — Technical Lead &amp; Data Engineer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="M Santhosh Kumar — Technical Lead at Digitap.ai and data engineer. Author of news-fetch (230+ stars) and Dev Tools, with 11 open-source packages on PyPI and npm.">
+	<meta name="description" content="M Santhosh Kumar — Technical Lead at Digitap.ai and data engineer. Built Cinematic Universe (a 3D galaxy of 940,000 films), news-fetch (230+ stars) and Dev Tools, plus 11 open-source packages.">
 	<meta name="theme-color" content="#f4f5f1" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)">
 
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="M Santhosh Kumar — Technical Lead & Data Engineer">
-	<meta property="og:description" content="Author of news-fetch and Dev Tools. Technical Lead at Digitap.ai, 11 open-source packages on PyPI and npm.">
+	<meta property="og:description" content="Built Cinematic Universe, news-fetch and Dev Tools. Technical Lead at Digitap.ai, 11 open-source packages on PyPI and npm.">
 	<meta property="og:url" content="https://santhoshse7en.github.io/cv/">
 	<link rel="canonical" href="https://santhoshse7en.github.io/cv/">
 
@@ -19,7 +19,7 @@
 
 	<link rel="preload" href="fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 
-	<link rel="stylesheet" href="css/style.css?v=2026-11-15m">
+	<link rel="stylesheet" href="css/style.css?v=2026-11-20a">
 
 	<script>
 		try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
@@ -98,6 +98,22 @@
 		</section>
 
 		<section class="keynotes wrap" aria-label="Featured work">
+			<article class="keynote keynote--cosmos">
+				<div class="keynote-body">
+					<h2><a href="https://cinematic-universe.com/" target="_blank" rel="noopener">Cinematic Universe</a></h2>
+					<p class="keynote-lede">An interactive 3D galaxy of nearly a million movies and documentaries. Every star is a real title, and neighbouring stars are genuinely similar films. Fly from genre to sub-genre to a single film, and see why each recommendation matches.</p>
+					<p class="keynote-proof tnum"><strong>940,938</strong> titles <span aria-hidden="true">·</span> <strong>166</strong> sub-genres <span aria-hidden="true">·</span> <strong>120</strong> fps <span aria-hidden="true">·</span> no backend</p>
+					<p class="keynote-stack">A Python pipeline builds a 626-dimension profile for every title, then UMAP, HDBSCAN and a custom ranking engine. Everything ships as static files rendered with Three.js and a Web Worker on Cloudflare.</p>
+					<p class="keynote-links">
+						<a href="https://cinematic-universe.com/" target="_blank" rel="noopener">Launch the galaxy <svg><use href="#i-arrow"/></svg></a>
+						<a href="https://cinematic-universe.com/how-it-works.html" target="_blank" rel="noopener">How it works <svg><use href="#i-arrow"/></svg></a>
+					</p>
+				</div>
+				<a class="keynote-shot" href="https://cinematic-universe.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+					<img src="images/cinematic-universe.jpg" width="1200" height="750" alt="" loading="eager" decoding="async">
+				</a>
+			</article>
+
 			<article class="keynote keynote--python">
 				<h2><a href="https://github.com/santhoshse7en/news-fetch" target="_blank" rel="noopener">news-fetch</a></h2>
 				<p class="keynote-lede">A news scraper and article extractor with its own extraction engine. Give it any news URL and it returns the title, body, Markdown, authors, date and image, plus a confidence score for each field.</p>
@@ -222,7 +238,7 @@ article.markdown  <span class="c"># + confidence scores</span></code></pre>
 	</main>
 
 	<div class="toast" id="toast" role="status" aria-live="polite"></div>
-	<script src="js/main.js?v=2026-11-15m"></script>
+	<script src="js/main.js?v=2026-11-20a"></script>
 </body>
 
 </html>
